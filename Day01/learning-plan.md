@@ -1,4 +1,4 @@
-# 🚀 Day 01 - My DevOps Learning Plan
+# 🚀 Day 01 - #90DaysOfDevOps
 
 ## 👨‍🎓 About Me
 
