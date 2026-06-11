@@ -6,7 +6,6 @@
 
 ![Linux Architecture](linux-architecture.png)
 
----
 
 # 🧩 Core Components of Linux
 
