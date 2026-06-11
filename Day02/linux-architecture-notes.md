@@ -2,7 +2,7 @@
 
 
 
-# 🐧 Linux Architecture
+# Linux Architecture
 
 ![Linux Architecture](linux-architecture.png)
 
