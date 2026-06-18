@@ -10,8 +10,7 @@ This runbook provides quick troubleshooting steps to verify apache2 service heal
 uname -a
 ```
 
-![Kernel and System Information](Kernel and System Information.png
-)
+![Kernel and System Information](Kernel and System Information.png)
 
 ### Observation
 
