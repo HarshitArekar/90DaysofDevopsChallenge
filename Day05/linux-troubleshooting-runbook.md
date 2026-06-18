@@ -122,7 +122,7 @@ df -h
 ```bash
 sudo ss -tulpn | grep 80
 ```
-![Listening Port](Images/Listening-Port.png)
+![Listening Port](Images/Apache-Listening-Port.png)
 
 
 ### Observation
