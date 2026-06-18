@@ -200,7 +200,7 @@ sudo systemctl restart apache2
 
 **Purpose:** Recover from temporary service issues.
 
----
+
 
 ## 2. Validate Apache Configuration
 
@@ -210,7 +210,7 @@ sudo apache2ctl configtest
 
 **Purpose:** Detect syntax errors in Apache configuration files.
 
----
+
 
 ## 3. Investigate Port Conflicts
 
@@ -220,7 +220,7 @@ sudo ss -tulpn | grep :80
 
 **Purpose:** Identify processes occupying port 80.
 
----
+
 
 # Conclusion
 
