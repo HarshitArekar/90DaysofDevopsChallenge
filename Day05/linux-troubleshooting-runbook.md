@@ -10,7 +10,7 @@ This runbook provides quick troubleshooting steps to verify apache2 service heal
 uname -a
 ```
 
-![Kernel and System Information](Kernel-and-System-Information.png)
+![Kernel and System Information](Images/Kernel-and-System-Information.png)
 
 ### Observation
 
@@ -25,7 +25,7 @@ uname -a
 cat /etc/os-release
 ```
 
-![Operating System Details](Operating-System-Details.png)
+![Operating System Details](Images/Operating-System-Details.png)
 
 ### Observation
 
@@ -42,7 +42,7 @@ cat /etc/os-release
 mkdir /tmp/runbook-demo
 ```
 
-![Temporary Directory](Temporary-Directory.png)
+![Temporary Directory](Images/Temporary-Directory.png)
 
 ### Observation
 
@@ -57,7 +57,7 @@ mkdir /tmp/runbook-demo
 cp /etc/hosts /tmp/runbook-demo/hosts-copymkdir /tmp/runbook-demo && ls -l /tmp/runbook-demo
 ```
 
-![Copy and Verify File](Copy-and-Verify-File.png)
+![Copy and Verify File](Images/Copy-and-Verify-File.png)
 
 ### Observation
 
@@ -74,7 +74,7 @@ cp /etc/hosts /tmp/runbook-demo/hosts-copymkdir /tmp/runbook-demo && ls -l /tmp/
 ps -C apache2 -o pid,pcpu,pmem,cmd
 ```
 
-![CPU & Memory](CPU-&-Memory.png)
+![CPU & Memory](Images/CPU-&-Memory.png)
 
 ### Observation
 
@@ -88,7 +88,7 @@ ps -C apache2 -o pid,pcpu,pmem,cmd
 ```bash
 free -h
 ```
-![System Memory](System-Memory.png)
+![System Memory](Images/System-Memory.png)
 
 
 ### Observation
@@ -106,7 +106,7 @@ free -h
 df -h
 ```
 
-![Disk Usage](Disk-Usage.png)
+![Disk Usage](Images/Disk-Usage.png)
 
 ### Observation
 
@@ -122,7 +122,7 @@ df -h
 ```bash
 sudo ss -tulpn | grep 80
 ```
-![Listening Port](Listening-Port.png)
+![Listening Port](Images/Listening-Port.png)
 
 
 ### Observation
@@ -138,7 +138,7 @@ sudo ss -tulpn | grep 80
 curl -I http://localhostsudo ss -tulpn | grep 80
 ```
 
-![Apache HTTP Response](Apache-HTTP-Response.png)
+![Apache HTTP Response](Images/Apache-HTTP-Response.png)
 
 ### Observation
 
@@ -155,7 +155,7 @@ curl -I http://localhostsudo ss -tulpn | grep 80
 sudo journalctl -u apache2 -n 50
 ```
 
-![Apache Service Logs](Apache-Service-Logs.png)
+![Apache Service Logs](Images/Apache-Service-Logs.png)
 
 ### Observation
 
@@ -170,7 +170,7 @@ sudo journalctl -u apache2 -n 50
 sudo tail -n 50 /var/log/apache2/error.log
 ```
 
-![Apache Error Logs](Apache-Error-Logs.png)
+![Apache Error Logs](Images/Apache-Error-Logs.png)
 
 ### Observation
 
