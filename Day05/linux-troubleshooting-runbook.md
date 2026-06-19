@@ -224,4 +224,4 @@ sudo ss -tulpn | grep :80
 
 # Conclusion
 
-The Apache2 service is healthy and operational. Resource utilization, network accessibility, and log analysis do not indicate any active issues. The server is successfully listening on port 80 and responding to HTTP requests.
+The Apache2 service is healthy and operational. Resource utilization, network accessibility, and log analysis do not indicate any active issues. The server is successfully listening on port 80 and responding to HTTP requests. 
