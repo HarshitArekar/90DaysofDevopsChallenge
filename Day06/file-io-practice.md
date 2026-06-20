@@ -81,7 +81,7 @@ cat notes.txt
 head -n 2 notes.txt
 ```
 
-![Head Output](Images/head.png)
+![Head Output](Images/cat.png)
 
 ### Observation
 
