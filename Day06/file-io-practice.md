@@ -99,7 +99,7 @@ tail -n 2 notes.txt
 
 ### Observation
 
-* Displayed the last two lines of the file.
+* Displayed the last two lines of the file. 
 
 ---
 
