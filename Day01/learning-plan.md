@@ -5,7 +5,7 @@
 - 🎓 Third Year Engineering Student
 - 🌱 Currently learning Linux and Networking
 - 💻 Passionate about Cloud Computing and DevOps
-- 📚 Following the 90 Days of DevOps challenge to build practical skills
+- 📚 Following the 90 Days of DevOps challenge to build practical skills 
 
 ---
 
