@@ -1,6 +1,6 @@
 # DAY 06 Read and Write Text Files in Linux
 
-This document demonstrates basic Linux file handling operations including file creation, writing, appending, and reading file contents.
+This document demonstrates basic Linux file handling operations including file creation, writing, appending, and reading file contents. 
 
 ## Command 1: Create a Text File
 
