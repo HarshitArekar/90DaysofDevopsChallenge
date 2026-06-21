@@ -1,6 +1,6 @@
 # Day 04 – Linux Practice: Processes and Services
 
-Today I practiced some basic Linux commands to understand how processes and services work in real systems.
+Today I practiced some basic Linux commands to understand how processes and services work in real systems. 
 
 ---
 
