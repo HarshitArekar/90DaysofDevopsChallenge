@@ -16,7 +16,7 @@
 | 💻 Shell | Command-line interface between user and kernel |
 | 📦 Applications | Programs that run in user space |
 | 🔧 systemd | First process (PID 1), manages services and boot |
-| 👤 User Space | Area where users and applications execute |
+| 👤 User Space | Area where users and applications execute | 
 
 ---
 
