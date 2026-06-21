@@ -1,6 +1,6 @@
 # Apache2 Linux Troubleshooting Runbook
 
-This runbook provides quick troubleshooting steps to verify apache2 service health on an AWS EC2 Ubuntu server.
+This runbook provides quick troubleshooting steps to verify apache2 service health on an AWS EC2 Ubuntu server. 
 
 # Environment Basics
 
