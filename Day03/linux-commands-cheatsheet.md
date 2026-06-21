@@ -1,6 +1,6 @@
 # 🚀 Day 03 – Linux Commands Cheat Sheet
 
-> A practical Linux command reference for DevOps engineers and system administrators.
+> A practical Linux command reference for DevOps engineers and system administrators. 
 
 ## 🖥️ Process Management
 
