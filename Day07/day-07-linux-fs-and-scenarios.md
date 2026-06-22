@@ -194,7 +194,7 @@ systemctl status apache2
 ```
 
 ### Screenshot
-
+ 
 ![Status Check](Images/inactive.png)
 
 ### Step 2
