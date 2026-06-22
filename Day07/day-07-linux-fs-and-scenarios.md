@@ -89,7 +89,7 @@ ls -l /var/log
 
 ### Screenshot
 
-![Log Directory](screenshots/var-log.png)
+![Log Directory](Images/var.png)
 
 ### I would use this when...
 
@@ -182,7 +182,10 @@ ls -la ~
 
 ---
 
+
+
 # Scenario 1 - Service Not Starting
+
 
 ### Step 1
 
@@ -192,12 +195,12 @@ systemctl status apache2
 
 ### Screenshot
 
-![Status Check](Images/.png)
+![Status Check](Images/inactive.png)
 
 ### Step 2
 
 ```bash
-journalctl -u apache2 -n 50
+journalctl -u apache2 -n 5
 ```
 
 ### Screenshot
@@ -225,6 +228,8 @@ systemctl list-units --type=service
 ![Service List](Images/list-service.png)
 
 ---
+
+
 
 # Scenario 2 - High CPU Usage
 
@@ -261,6 +266,8 @@ ps -p <PID> -f
 
 ---
 
+
+
 # Scenario 3 - Finding Service Logs
 
 ### Step 1
@@ -294,6 +301,8 @@ journalctl -u nginx -f
 ![Follow Logs](Images/real-time.png)
 
 ---
+
+
 
 # Scenario 4 - File Permission Issue
 
