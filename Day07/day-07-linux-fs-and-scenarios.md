@@ -15,7 +15,7 @@ The root directory is the top-level directory in Linux. Every file and directory
 ls -l /
 ```
 
-### Screenshot
+### Output
 
 ![Root Directory](Images/root.png)
 
@@ -33,7 +33,7 @@ I need to navigate the Linux file system from the starting point.
 ls -l /home
 ```
 
-### Screenshot
+### Output
 
 ![Home Directory](Images/home.png)
 
@@ -51,7 +51,7 @@ I need to access user files and personal data.
 ls -l /root
 ```
 
-### Screenshot
+### Output
 
 ![Root User Home](Images/root-.png)
 
@@ -69,7 +69,7 @@ I am working as the root user.
 ls -l /etc
 ```
 
-### Screenshot
+### Output
 
 ![ETC Directory](Images/etc.png)
 
@@ -87,7 +87,7 @@ I need to check or edit configuration files.
 ls -l /var/log
 ```
 
-### Screenshot
+### Output
 
 ![Log Directory](Images/var.png)
 
@@ -105,7 +105,7 @@ I am troubleshooting system or application issues.
 ls -l /tmp
 ```
 
-### Screenshot
+### Output
 
 ![TMP Directory](Images/tmp.png)
 
@@ -123,7 +123,7 @@ I need temporary storage during testing.
 ls -l /bin
 ```
 
-### Screenshot
+### Output
 
 ![BIN Directory](Images/bin.png)
 
@@ -137,7 +137,7 @@ ls -l /bin
 ls -l /usr/bin
 ```
 
-### Screenshot
+### Output
 
 ![USR BIN Directory](Images/sys-bin.png)
 
@@ -152,7 +152,7 @@ ls -l /usr/bin
 du -sh /var/log/* 2>/dev/null | sort -h | tail -5
 ```
 
-### Screenshot
+### Output
 
 ![Largest Logs](Images/largest-log-file.png)
 
@@ -164,7 +164,7 @@ du -sh /var/log/* 2>/dev/null | sort -h | tail -5
 cat /etc/hostname
 ```
 
-### Screenshot
+### Output
 
 ![Hostname](Images/host-name.png)
 
@@ -176,7 +176,7 @@ cat /etc/hostname
 ls -la ~
 ```
 
-### Screenshot
+### Output
 
 ![Home Contents](Images/check-home-directory-contents.png)
 
@@ -193,7 +193,7 @@ ls -la ~
 systemctl status apache2
 ```
 
-### Screenshot
+### Output
  
 ![Status Check](Images/inactive.png)
 
@@ -203,7 +203,7 @@ systemctl status apache2
 journalctl -u apache2 -n 5
 ```
 
-### Screenshot
+### Output
 
 ![Logs Check](Images/last-5-log-service.png)
 
@@ -213,7 +213,7 @@ journalctl -u apache2 -n 5
 systemctl is-enabled apache2
 ```
 
-### Screenshot
+### Output
 
 ![Enabled Check](Images/enabled.png)
 
@@ -223,7 +223,7 @@ systemctl is-enabled apache2
 systemctl list-units --type=service
 ```
 
-### Screenshot
+### Output
 
 ![Service List](Images/list-service.png)
 
@@ -239,7 +239,7 @@ systemctl list-units --type=service
 top
 ```
 
-### Screenshot
+### Output
 
 ![Top Command](Images/top.png)
 
@@ -249,7 +249,7 @@ top
 ps aux --sort=-%cpu | head -10
 ```
 
-### Screenshot
+### Output
 
 ![CPU Processes](Images/top-cpu-consuming.png)
 
@@ -259,7 +259,7 @@ ps aux --sort=-%cpu | head -10
 ps -p <PID> -f
 ```
 
-### Screenshot
+### Output
 
 ![Process Details](Images/deiail-info-high-cpu.png))
 
@@ -276,7 +276,7 @@ ps -p <PID> -f
 systemctl status nginx
 ```
 
-### Screenshot
+### Output
 
 ![Docker Status](Images/status.png)
 
@@ -286,7 +286,7 @@ systemctl status nginx
 journalctl -u nginx -n 5
 ```
 
-### Screenshot
+### Output
 
 ![Docker Logs](Images/recent.png)
 
@@ -296,7 +296,7 @@ journalctl -u nginx -n 5
 journalctl -u nginx -f
 ```
 
-### Screenshot
+### Output
 
 ![Follow Logs](Images/real-time.png)
 
@@ -312,7 +312,7 @@ journalctl -u nginx -f
 ls -l /home/user/backup.sh
 ```
 
-### Screenshot
+### Output
 
 ![Permission Check](Images/current-per.png)
 
@@ -322,7 +322,7 @@ ls -l /home/user/backup.sh
 chmod +x /home/user/backup.sh
 ```
 
-### Screenshot
+### Output
 
 ![Add Permission](Images/exec-per.png)
 
@@ -331,7 +331,7 @@ chmod +x /home/user/backup.sh
 ```bash
 ls -l /home/user/backup.sh
 ```
-### Screenshot
+### Output
 
 ![view Permission](Images/verify-exe-per.png)
 
