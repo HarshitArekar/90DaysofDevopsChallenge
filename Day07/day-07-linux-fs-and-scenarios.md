@@ -329,7 +329,7 @@ chmod +x /home/user/backup.sh
 ### Step 3
 
 ```bash
-ls -l /home/user/backup.sh
+ls -l /home/user/backup.sh 
 ```
 ### Output
 
