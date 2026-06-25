@@ -1,6 +1,5 @@
 # Day 08 – Cloud Server Setup: Docker, Nginx & Web Deployment
 
-<br>
 Today task is to deploy a cloud server, connect to it using SSH, install Docker and Nginx, configure security groups, verify web access, and collect Nginx logs. This exercise provides hands-on experience with real-world DevOps server deployment.
 <br>
 <br>
@@ -200,7 +199,7 @@ Copy the log file from the cloud server to your local computer.
 
 
 ---
-
+<br>
 
 ## Screenshots
 
@@ -210,7 +209,7 @@ Copy the log file from the cloud server to your local computer.
 4. Extract Nginx Logs (`nginx-logs.png`)
 
 ---
-
+<br>
 
 # Challenges Faced
 
@@ -220,7 +219,7 @@ Copy the log file from the cloud server to your local computer.
 * Understanding where Nginx stores its log files.
 
 ---
-
+<br>
 # What I Learned
 
 * How to launch an AWS EC2 instance.
