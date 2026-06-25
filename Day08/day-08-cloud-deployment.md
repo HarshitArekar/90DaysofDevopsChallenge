@@ -27,8 +27,7 @@ Connect securely to the cloud server using SSH.
 
 
 ---
-
-
+<br>
 
 # Part 2: Install Docker & Nginx
 
@@ -103,7 +102,7 @@ Ensure the Nginx service is active and running.
 
 
 ---
-
+<br>
 
 # Part 3: Configure Security Group
 
@@ -140,7 +139,7 @@ Modified the default Nginx page with my own content.
 
 
 ---
-
+<br>
 
 
 # Part 4: Extract Nginx Logs
