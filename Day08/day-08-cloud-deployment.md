@@ -4,6 +4,8 @@
 Today task is to deploy a cloud server, connect to it using SSH, install Docker and Nginx, configure security groups, verify web access, and collect Nginx logs. This exercise provides hands-on experience with real-world DevOps server deployment.
 
 
+
+
 # Part 1: Launch Cloud Instance & SSH Access
 
 ## Step 1: Launch an EC2 Instance
