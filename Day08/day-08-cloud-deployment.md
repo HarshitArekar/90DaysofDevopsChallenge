@@ -220,6 +220,7 @@ Copy the log file from the cloud server to your local computer.
 
 ---
 <br>
+
 # What I Learned
 
 * How to launch an AWS EC2 instance.
