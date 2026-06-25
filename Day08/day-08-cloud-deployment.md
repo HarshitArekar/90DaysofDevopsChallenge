@@ -8,7 +8,7 @@ Today task is to deploy a cloud server, connect to it using SSH, install Docker 
 
 ## Step 1: Launch an EC2 Instance
 
-Launch an Ubuntu EC2 instance from the AWS Management Console.
+Launch an Ubuntu EC2 instance from the AWS Management Console. 
 
 
 ## Step 2: Connect to the Server via SSH
