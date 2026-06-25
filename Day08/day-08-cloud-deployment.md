@@ -1,8 +1,8 @@
 # Day 08 – Cloud Server Setup: Docker, Nginx & Web Deployment
 
+
 Today task is to deploy a cloud server, connect to it using SSH, install Docker and Nginx, configure security groups, verify web access, and collect Nginx logs. This exercise provides hands-on experience with real-world DevOps server deployment.
 
----
 
 # Part 1: Launch Cloud Instance & SSH Access
 
@@ -10,7 +10,6 @@ Today task is to deploy a cloud server, connect to it using SSH, install Docker 
 
 Launch an Ubuntu EC2 instance from the AWS Management Console.
 
----
 
 ## Step 2: Connect to the Server via SSH
 
@@ -23,6 +22,8 @@ ssh -i your-key.pem ubuntu@<your-public-ip>
 ### Why
 
 Connect securely to the cloud server using SSH.
+
+
 
 ---
 
@@ -43,7 +44,6 @@ sudo apt upgrade -y
 
 Update package information and install the latest security updates.
 
----
 
 ## Step 2: Install Docker
 
@@ -57,7 +57,7 @@ sudo apt install docker.io -y
 
 Install Docker so containers can be deployed on the server.
 
----
+
 
 ## Step 3: Verify Docker Installation
 
@@ -71,7 +71,7 @@ docker --version
 
 Verify Docker was installed successfully.
 
----
+
 
 ## Step 4: Install Nginx
 
@@ -85,7 +85,7 @@ sudo apt install nginx -y
 
 Install the Nginx web server.
 
----
+
 
 ## Step 5: Verify Nginx Service
 
@@ -99,8 +99,9 @@ sudo systemctl status nginx
 
 Ensure the Nginx service is active and running.
 
----
 
+
+---
 
 
 # Part 3: Configure Security Group
@@ -113,7 +114,7 @@ Open **Port 80 (HTTP)** in the EC2 Security Group.
 
 Allows users to access the web server from a browser.
 
----
+
 
 ## Step 2: Test Web Access
 
@@ -124,6 +125,18 @@ http://<your-public-ip>
 ```
 
 The Nginx Welcome Page should appear.
+
+
+## Create Custom Web Page
+
+```bash
+cd /var/www/html
+echo "Hello, Harshit Arekar Welcome to nginx!
+The nginx web server is successfully installed and working" | sudo tee index.nginx-debian.htmlcd
+```
+
+Modified the default Nginx page with my own content.
+
 
 ---
 
@@ -143,7 +156,7 @@ sudo cat /var/log/nginx/access.log
 
 Display requests received by the Nginx web server.
 
----
+
 
 ## Step 2: Save Logs to a File
 
@@ -157,7 +170,7 @@ cp /var/log/nginx/access.log ~/nginx-logs.txt
 
 Create a copy of the access log in your home directory for submission.
 
----
+
 
 ## Step 3: Verify the Log File
 
@@ -171,7 +184,7 @@ cat ~/nginx-logs.txt
 
 Verify the log file contains the copied Nginx logs.
 
----
+
 
 ## Step 4: Download the Log File (Local Machine)
 
@@ -185,15 +198,16 @@ scp -i your-key.pem ubuntu@<your-public-ip>:~/nginx-logs.txt .
 
 Copy the log file from the cloud server to your local computer.
 
+
 ---
 
 
 ## Screenshots
 
-1.Launch Cloud Instance & SSH Access(`ssh-connection.png`)
-2. Install Docker & Nginx (`nginx-webpage.png`)
-3.  (`docker-nginx.png`)
-4. Docker Nginx Container (`docker-nginx.png`)
+1. Launch Cloud Instance & SSH Access(`ssh-connection.png`)
+2. Install Docker & Nginx (`nginx-install.png`)
+3. Nginx Welcome Page  (`nginx-webpage.png`)
+4. Extract Nginx Logs (`nginx-logs.png`)
 
 ---
 
