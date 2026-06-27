@@ -231,18 +231,22 @@ ls -ld /opt/team-workspace
 
 ---
 
-# Commands Used
 
-* `useradd`
-* `passwd`
-* `groupadd`
-* `usermod`
-* `gpasswd`
-* `mkdir`
-* `chgrp`
-* `chmod`
-* `groups`
-* `cat`
-* `ls`
-* `touch`
-* `sudo`
+## Commands Used
+
+| Command    | Meaning                                    |
+| ---------- | ------------------------------------------ |
+| `useradd`  | Create a new user                          |
+| `passwd`   | Set or change a user's password            |
+| `groupadd` | Create a new group                         |
+| `usermod`  | Modify a user account                      |
+| `gpasswd`  | Manage group membership                    |
+| `mkdir`    | Create a directory                         |
+| `chgrp`    | Change group ownership                     |
+| `chmod`    | Change file or directory permissions       |
+| `groups`   | Display a user's groups                    |
+| `cat`      | Display file contents                      |
+| `ls`       | List files and directories                 |
+| `touch`    | Create an empty file                       |
+| `sudo`     | Run commands with administrator privileges |
+
