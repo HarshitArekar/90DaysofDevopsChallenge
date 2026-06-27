@@ -148,7 +148,7 @@ ls /home
 
 ## Output
 
-![Verify Home Directories](Verify-Home-Directories.png)
+![Verify Home Directories](Images/Verify-Home-Directories.png)
 
 
 ---
@@ -169,7 +169,7 @@ ls -l /opt/dev-project
 
 ## Output
 
-![Shared Directory Access](Shared-Directory-Access.png)
+![Shared Directory Access](Images/Shared-Directory-Access.png)
 
 ---
 
@@ -216,8 +216,8 @@ ls -ld /opt/team-workspace
 
 ## Output
 
-![Team-Workspace](Team-Workspace.png)
-![Team-Workspace](Team-Workspace-1.png)
+![Team-Workspace](Images/Team-Workspace.png)
+![Team-Workspace](Images/Team-Workspace-1.png)
 
 ---
 
