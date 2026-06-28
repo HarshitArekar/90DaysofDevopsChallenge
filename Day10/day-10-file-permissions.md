@@ -39,7 +39,7 @@ ls -l
 
 ### 📸 Output
 
-![notes](Images/file-create.png)
+![notes](Images/file-create.png) 
 
 ---
 
