@@ -37,7 +37,9 @@ ls -l
 | `vim`    | Creates or edits a file                               |
 | `ls -l`  | Lists files with detailed information and permissions |
 
-![notes](images/file-create.png)
+### 📸 Output
+
+![notes](Images/file-create.png)
 
 ---
 
@@ -70,7 +72,7 @@ tail -n 5 /etc/passwd
 
 ### 📸 Output
 
-![notes](images/read-file.png)
+![notes](Images/read-file.png)
 
 ---
 
@@ -106,7 +108,7 @@ mkdir -m 755 project
 
 ### 📸 Output
 
-![notes](images/permission.png)
+![notes](Images/permission.png)
 
 ---
 
@@ -136,7 +138,7 @@ chmod -x script.sh
 
 ### 📸 Output
 
-![notes](images/test-permission.png)
+![notes](Images/test-permission.png)
 
 
 ---
