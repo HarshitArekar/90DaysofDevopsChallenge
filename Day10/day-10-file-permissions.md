@@ -1,343 +1,149 @@
 # 🚀 Day 10 – File Permissions & File Operations
 
-> Today's Learn how Linux file permissions work by creating, reading, and modifying files.
+>Today i Practiced Linux file operations and permission management using common Linux commands.
 
 ---
 
-# 📂 Task 1: Create Files
+# 📋 Task 1: Create Files
 
-### 1️⃣ Create an Empty File
-
-**Command**
+### 💻 Commands
 
 ```bash
 touch devops.txt
-```
 
-**why**
-
-Creates an empty file named `devops.txt`.
-
-📸 **Screenshot**
-
-```text
-images/01-touch-devops.png
-```
-
----
-
-### 2️⃣ Create a File with Content
-
-**Command**
-
-```bash
 echo "Learning Linux File Permissions" > notes.txt
-```
 
-**Meaning**
-
-Creates `notes.txt` and writes text into it.
-
-📸 **Screenshot**
-
-```text
-images/02-notes-created.png
-```
-
----
-
-### 3️⃣ Create a Shell Script
-
-**Command**
-
-```bash
 vim script.sh
 ```
 
-Inside the file:
+Inside `script.sh`
 
 ```bash
 echo "Hello DevOps"
 ```
 
-**Meaning**
-
-Creates a shell script using Vim.
-
-📸 **Screenshot**
-
-```text
-images/03-script-created.png
-```
-
----
-
-### 4️⃣ Verify Files
-
-**Command**
+Verify
 
 ```bash
 ls -l
 ```
 
-**Meaning**
+### 📖 What these commands do
 
-Lists files along with their permissions.
+| Command  | Purpose                                               |
+| -------- | ----------------------------------------------------- |
+| `touch`  | Creates an empty file                                 |
+| `echo >` | Creates a file and writes content                     |
+| `vim`    | Creates or edits a file                               |
+| `ls -l`  | Lists files with detailed information and permissions |
 
-📸 **Screenshot**
-
-```text
-images/04-ls-output.png
-```
+![notes](images/file-create.png)
 
 ---
 
-# 📖 Task 2: Read Files
+# 📋 Task 2: Read Files
 
-### 1️⃣ Display File Content
+### 🎯 Objective
 
-**Command**
+Read file contents using different Linux utilities.
+
+### 💻 Commands
 
 ```bash
 cat notes.txt
-```
 
-**Meaning**
-
-Displays the complete contents of the file.
-
-📸 **Screenshot**
-
-```text
-images/05-cat-notes.png
-```
-
----
-
-### 2️⃣ Open File in Read-Only Mode
-
-**Command**
-
-```bash
 vim -R script.sh
-```
 
-**Meaning**
-
-Opens the file in Vim without allowing modifications.
-
-📸 **Screenshot**
-
-```text
-images/06-vim-readonly.png
-```
-
----
-
-### 3️⃣ Display First Five Lines
-
-**Command**
-
-```bash
 head -n 5 /etc/passwd
-```
 
-**Meaning**
-
-Shows the first five lines of the `/etc/passwd` file.
-
-📸 **Screenshot**
-
-```text
-images/07-head.png
-```
-
----
-
-### 4️⃣ Display Last Five Lines
-
-**Command**
-
-```bash
 tail -n 5 /etc/passwd
 ```
 
-**Meaning**
+### 📖 What these commands do
 
-Shows the last five lines of the `/etc/passwd` file.
+| Command  | Purpose                          |
+| -------- | -------------------------------- |
+| `cat`    | Displays the entire file content |
+| `vim -R` | Opens a file in read-only mode   |
+| `head`   | Displays the first 5 lines       |
+| `tail`   | Displays the last 5 lines        |
 
-📸 **Screenshot**
+### 📸 Output
 
-```text
-images/08-tail.png
-```
+![notes](images/read-file.png)
 
 ---
 
-# 🔐 Task 3: Modify Permissions
+# 📋 Task 3: Understand & Modify Permissions
 
-### Make Script Executable
+### 🎯 Objective
 
-**Command**
+Learn how Linux permissions work and modify them.
+
+### 💻 Commands
 
 ```bash
 chmod +x script.sh
-```
 
-**Meaning**
-
-Adds execute permission to the script.
-
-📸 **Screenshot**
-
-```text
-images/09-chmod-x.png
-```
-
----
-
-### Execute Script
-
-**Command**
-
-```bash
 ./script.sh
-```
 
-**Meaning**
-
-Runs the shell script.
-
-📸 **Screenshot**
-
-```text
-images/10-run-script.png
-```
-
----
-
-### Make File Read-Only
-
-**Command**
-
-```bash
 chmod a-w devops.txt
-```
 
-**Meaning**
-
-Removes write permission for all users.
-
-📸 **Screenshot**
-
-```text
-images/11-readonly.png
-```
-
----
-
-### Set Permission to 640
-
-**Command**
-
-```bash
 chmod 640 notes.txt
-```
 
-**Meaning**
-
-* Owner → Read & Write
-* Group → Read
-* Others → No Permission
-
-📸 **Screenshot**
-
-```text
-images/12-chmod640.png
-```
-
----
-
-### Create Directory with 755 Permission
-
-**Command**
-
-```bash
 mkdir -m 755 project
 ```
 
-**Meaning**
+### 📖 What these commands do
 
-Creates a directory with `755` permissions.
+| Command        | Purpose                                              |
+| -------------- | ---------------------------------------------------- |
+| `chmod +x`     | Adds execute permission                              |
+| `./script.sh`  | Executes the script                                  |
+| `chmod a-w`    | Removes write permission                             |
+| `chmod 640`    | Sets permission to Owner: RW, Group: R, Others: None |
+| `mkdir -m 755` | Creates a directory with 755 permissions             |
 
-📸 **Screenshot**
+### 📸 Output
 
-```text
-images/13-project755.png
-```
+![notes](images/permission.png)
 
 ---
 
-# 🧪 Task 4: Test Permissions
+# 📋 Task 4: Test Permissions
 
-### Write to Read-Only File
+### 🎯 Objective
 
-**Command**
+Verify how Linux enforces file permissions.
+
+### 💻 Commands
 
 ```bash
 echo "Testing" >> devops.txt
-```
 
-**Meaning**
-
-Attempts to write to a read-only file.
-
-📸 **Screenshot**
-
-```text
-images/14-permission-denied.png
-```
-
----
-
-### Execute Without Execute Permission
-
-**Command**
-
-```bash
 chmod -x script.sh
+
 ./script.sh
 ```
 
-**Meaning**
+### 📖 What these commands do
 
-Shows that a script cannot run without execute permission.
+| Command       | Purpose                              |
+| ------------- | ------------------------------------ |
+| `echo >>`     | Attempts to append content to a file |
+| `chmod -x`    | Removes execute permission           |
+| `./script.sh` | Attempts to run the script           |
 
-📸 **Screenshot**
+### 📸 Output
 
-```text
-images/15-no-execute.png
-```
+![notes](images/test-permission.png)
+
 
 ---
 
-# 📚 What I Learned
+# 📚 Key Learnings
 
-* Linux permissions protect files from unauthorized access.
+* File permissions determine who can access or modify files.
 * Execute permission is required to run shell scripts.
-* `chmod` changes permissions using symbolic and numeric modes.
-* `ls -l` helps verify permission changes quickly.
-
----
-
-## 📖 References
-
-* `man chmod`
-* `man ls`
-* `man cat`
-* `man head`
-* `man tail`
-
----
-
-⭐ **Day 10 Challenge Completed Successfully!**
+* `chmod` supports both symbolic and numeric permission modes.
+* `ls -l` is useful for verifying permission changes.
