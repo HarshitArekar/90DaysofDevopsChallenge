@@ -20,7 +20,7 @@ ls -l
 ### What I Learned
 
 * Every file has an **Owner** and a **Group**.
-* Ownership determines who can access or modify a file.
+* Ownership determines who can access or modify a file. 
 
 ---
 
