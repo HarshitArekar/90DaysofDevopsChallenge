@@ -119,6 +119,7 @@ ls -lR heist-project
 ## Commands
 
 ```bash
+Create users: tokyo, berlin, nairobi (if not already created)
 sudo groupadd vault-team
 sudo groupadd tech-team
 
@@ -139,8 +140,7 @@ ls -l bank-heist
 
 ## Output
 
-```text
-```
+![notes](Images/Practice-Challenge.png) 
 
 ---
 
