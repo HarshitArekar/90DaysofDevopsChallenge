@@ -1,4 +1,4 @@
-<img width="995" height="780" alt="Recursive-Ownership" src="https://github.com/user-attachments/assets/6c50376f-bd4f-43f0-b03d-229389f84f47" /># Day 11 – Linux File Ownership (chown & chgrp)
+# Day 11 – Linux File Ownership (chown & chgrp)
 
 
 Today's i learned how Linux file ownership works and practiced changing file owners and groups using `chown` and `chgrp`.
