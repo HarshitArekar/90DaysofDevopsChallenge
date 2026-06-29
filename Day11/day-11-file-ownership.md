@@ -144,7 +144,7 @@ ls -l bank-heist
 
 ---
 
-# Commands Used with Meaning
+# Commands I Used
 
 ```bash
 ls -l
