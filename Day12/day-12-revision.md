@@ -1,18 +1,6 @@
-# Revision (Days 01–11)
+# 🚀 Day 12 – Linux Revision & Practice ( Revision (Days 01–11) )
 
 - In the first 11 days of my #90DaysOfDevOps journey, I focused on building strong Linux fundamentals through hands-on practice. From managing users and permissions to troubleshooting services, every task has helped me understand how real systems work.
-
-# 🚀 Day 12 – Linux Revision & Practice
-
-> **"Revision turns knowledge into confidence."**
-
----
-
-# 🎯 Goal
-
-Day 12 is a revision day. Instead of learning new topics, today's focus is to strengthen the Linux concepts learned during **Days 01–11** through quick hands-on practice.
-
----
 
 # 📚 Topics Revised
 
@@ -174,52 +162,5 @@ This ensures the correct user owns the file while maintaining secure permissions
 - Learn Shell Scripting basics.
 - Build confidence with real-world Linux tasks.
 
----
-
-# 💡 Key Takeaways
-
-- Revision is essential for long-term learning.
-- Linux troubleshooting becomes easier with regular practice.
-- File permissions and ownership are critical for system security.
-- Understanding service status and logs is an important DevOps skill.
-- Small daily practice leads to continuous improvement.
-
----
-
-# 📌 Git Commands
-
-```bash
-git add .
-
-git commit -m "Completed Day 12 - Linux Revision"
-
-git push origin main
-```
-
----
-
-# 📂 Folder Structure
-
-```text
-2026/
-└── day-12/
-    └── markdown.md
-```
-
----
-
-# ✅ Day 12 Checklist
-
-- [x] Reviewed previous topics
-- [x] Practiced Linux commands
-- [x] Revised file permissions
-- [x] Revised user management
-- [x] Completed self-assessment
-- [x] Updated GitHub repository
-
----
-
-# 🎉 Conclusion
-
-Day 12 was all about reinforcing the Linux fundamentals learned over the past eleven days. Revision helped strengthen my understanding of processes, services, permissions, ownership, and user management. With a stronger foundation, I'm ready to continue the **#90DaysOfDevOps** journey with confidence.
+journey with confidence.
 
