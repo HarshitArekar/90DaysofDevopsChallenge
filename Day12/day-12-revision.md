@@ -5,7 +5,7 @@
 # 📚 Topics Revised
 
 - ✅ Linux Basics
-- ✅ Linux File System
+- ✅ Linux File System 
 - ✅ Processes & Services
 - ✅ File Permissions
 - ✅ Ownership (chown)
