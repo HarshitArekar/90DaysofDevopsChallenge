@@ -2,56 +2,224 @@
 
 - In the first 11 days of my #90DaysOfDevOps journey, I focused on building strong Linux fundamentals through hands-on practice. From managing users and permissions to troubleshooting services, every task has helped me understand how real systems work.
 
-## Processes & services
+# 🚀 Day 12 – Linux Revision & Practice
 
-When my system hangs or slows down, I use the following commands to troubleshoot and check service health:
+> **"Revision turns knowledge into confidence."**
 
-`ps aux` → Lists all running processes on the system.
+---
 
-`top` → Display sorted information about processes.
+# 🎯 Goal
 
-`systemctl status <service>` → Displays the status of a specific service (whether it's active, failed, or inactive).
+Day 12 is a revision day. Instead of learning new topics, today's focus is to strengthen the Linux concepts learned during **Days 01–11** through quick hands-on practice.
 
-`journalctl -u <service>` → Displays logs for a specific service, useful for debugging issues.
+---
 
-## File skills
+# 📚 Topics Revised
 
-I have practiced creating/modifying/permission of Linux file/folder. Here is how to safely change ownership and permissions:
+- ✅ Linux Basics
+- ✅ Linux File System
+- ✅ Processes & Services
+- ✅ File Permissions
+- ✅ Ownership (chown)
+- ✅ Groups (chgrp)
+- ✅ Users & Groups
+- ✅ Basic Linux Commands
 
-- Check current ownership and permissions
+---
 
-`ls -l /path/to/file`
+# 🔹 Task 1 – Review Your DevOps Journey
 
-- Change ownership (user and group)
+## Objective
 
-`sudo chown user:group /path/to/file`
+Take a few minutes to review your progress from Day 01 until today.
 
-- Change permissions (least privilege principle)
+### Reflection
 
-`chmod 751 /path/to/file`
+- Revisited my learning roadmap.
+- Checked completed topics.
+- Identified concepts that need more practice.
+- Prepared goals for upcoming days.
 
-- Example :
+---
 
-![File Permission Practice](file_permission.png)
+# 🔹 Task 2 – Process & Service Health Check
 
-## Cheat sheet refresh
+## Commands Practiced
 
-Top commands I'd use in an incident:
+```bash
+ps -ef
 
-- `ps aux` - Lists all running processes with CPU/memory usage
-- `mpstat` - Monitors CPU utilization across cores, highlighting bottlenecks or unusual load.
-- `systemctl status service` - Verifies if a critical service is active, failed, or restarting.
-- `cat /var/log/nginx/error.log` - Reads raw logs for web server errors (replace with relevant service log path).
-- `journalctl -u service` - Retrieves detailed logs for a given service, useful for debugging failures.
-- `free -m` - Displays memory usage in MB to check for exhaustion or leaks.
+systemctl status ssh
 
-## What will I focus on improving in the next 3 days?
+journalctl -u ssh -n 20
+```
 
-- I want to strengthen my Linux networking fundamentals and understand how systems communicate over a network.
-- I will complete Linux Volume Management (Partitions, LVM, Mount Points, and Storage Management).
-- I will continue practicing Linux administration tasks including users, groups, permissions, and troubleshooting.
-- I plan to spend time on Git and GitHub workflows to improve version control skills.
-- I will also revise AWS fundamentals and explore more EC2 hands-on exercises.
-- Also I will practice users & group management.
+## What I Learned
 
+- `ps -ef` displays all running processes.
+- `systemctl status` checks whether a service is running properly.
+- `journalctl` helps investigate service logs and troubleshoot issues.
+
+---
+
+# 🔹 Task 3 – File Management Practice
+
+## Commands Practiced
+
+```bash
+mkdir revision-demo
+
+cd revision-demo
+
+touch notes.txt
+
+echo "Linux Revision Day 12" >> notes.txt
+
+cp notes.txt backup.txt
+
+ls -l
+
+chmod 644 notes.txt
+
+sudo chown ubuntu:ubuntu notes.txt
+```
+
+## What I Learned
+
+- Created directories and files.
+- Added text to a file.
+- Copied files.
+- Modified file permissions.
+- Changed file ownership.
+
+---
+
+# 🔹 Task 4 – My Linux Emergency Commands
+
+These are the commands I would use first while troubleshooting a Linux server.
+
+| Command | Purpose |
+|----------|---------|
+| `ps -ef` | View running processes |
+| `systemctl status` | Check service health |
+| `journalctl` | Read service logs |
+| `ls -l` | Verify file permissions |
+| `chmod` | Change permissions |
+
+---
+
+# 🔹 Task 5 – User & Ownership Practice
+
+## Commands Practiced
+
+```bash
+sudo useradd revisionuser
+
+id revisionuser
+
+sudo chown revisionuser:revisionuser notes.txt
+
+ls -l notes.txt
+```
+
+## What I Learned
+
+- Created a new Linux user.
+- Verified user information.
+- Changed file ownership.
+- Confirmed ownership changes.
+
+---
+
+# 🧠 Self Assessment
+
+## 1️⃣ Which three Linux commands help me the most?
+
+- `systemctl status`
+- `ps -ef`
+- `ls -l`
+
+These commands help me quickly diagnose service issues, monitor processes, and verify file permissions.
+
+---
+
+## 2️⃣ How do I verify whether a service is healthy?
+
+```bash
+systemctl status ssh
+
+journalctl -u ssh -n 20
+
+ps -ef
+```
+
+---
+
+## 3️⃣ How do I safely change file ownership and permissions?
+
+```bash
+sudo chown ubuntu:ubuntu notes.txt
+
+chmod 644 notes.txt
+```
+
+This ensures the correct user owns the file while maintaining secure permissions.
+
+---
+
+## 4️⃣ My Goals for the Next Three Days
+
+- Improve Linux troubleshooting skills.
+- Practice user and group management.
+- Learn Shell Scripting basics.
+- Build confidence with real-world Linux tasks.
+
+---
+
+# 💡 Key Takeaways
+
+- Revision is essential for long-term learning.
+- Linux troubleshooting becomes easier with regular practice.
+- File permissions and ownership are critical for system security.
+- Understanding service status and logs is an important DevOps skill.
+- Small daily practice leads to continuous improvement.
+
+---
+
+# 📌 Git Commands
+
+```bash
+git add .
+
+git commit -m "Completed Day 12 - Linux Revision"
+
+git push origin main
+```
+
+---
+
+# 📂 Folder Structure
+
+```text
+2026/
+└── day-12/
+    └── markdown.md
+```
+
+---
+
+# ✅ Day 12 Checklist
+
+- [x] Reviewed previous topics
+- [x] Practiced Linux commands
+- [x] Revised file permissions
+- [x] Revised user management
+- [x] Completed self-assessment
+- [x] Updated GitHub repository
+
+---
+
+# 🎉 Conclusion
+
+Day 12 was all about reinforcing the Linux fundamentals learned over the past eleven days. Revision helped strengthen my understanding of processes, services, permissions, ownership, and user management. With a stronger foundation, I'm ready to continue the **#90DaysOfDevOps** journey with confidence.
 
