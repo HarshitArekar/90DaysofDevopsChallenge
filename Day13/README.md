@@ -1,7 +1,7 @@
 # Day 13 – Linux Volume Management (LVM)
 
 ## Task
-Learn LVM to manage storage flexibly – create, extend, and mount volumes.
+Learn LVM to manage storage flexibly – create, extend, and mount volumes. 
 
 **Watch First:** [Linux LVM Tutorial](https://youtu.be/Evnf2AAt7FQ?si=ncnfQYySYtK_2K3c)
 
