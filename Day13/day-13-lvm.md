@@ -34,7 +34,7 @@ lvs
 
 # Task 2 - Verify Newly Attached EBS Volumes
 
-## 🎯 Objective
+
 
 Verify that the newly attached storage devices are visible to Linux.
 
@@ -56,7 +56,7 @@ lsblk
 
 # Task 3 - Create Physical Volumes (PV)
 
-## 🎯 Objective
+
 
 Initialize raw disks so they can be managed by LVM.
 
@@ -84,7 +84,7 @@ sudo pvdisplay
 
 # Task 4 - Create Volume Group (VG)
 
-## 🎯 Objective
+
 
 Combine multiple Physical Volumes into one storage pool.
 
@@ -112,7 +112,7 @@ sudo vgdisplay
 
 # Task 5 - Create Logical Volume (LV)
 
-## 🎯 Objective
+
 
 Create a Logical Volume from the available storage in the Volume Group.
 
@@ -146,7 +146,7 @@ sudo lvcreate -l 100%FREE -n tws-lv devops-vg
 
 # Task 6 - Format and Mount the Logical Volume
 
-## 🎯 Objective
+
 
 Create a filesystem and mount the Logical Volume.
 
@@ -180,7 +180,7 @@ df -h
 
 # Task 7 - Extend the Logical Volume
 
-## 🎯 Objective
+
 
 Increase the storage capacity of the Logical Volume.
 
@@ -209,7 +209,7 @@ df -h
 
 # Task 8 - Mount a Disk Without LVM
 
-## 🎯 Objective
+
 
 Understand the difference between mounting a raw disk and using LVM.
 
