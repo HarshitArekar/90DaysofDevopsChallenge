@@ -187,7 +187,7 @@ Increase the storage capacity of the Logical Volume.
 ### Commands
 
 ```bash
-sudo lvextend -L +1G /dev/devops-vg/tws-lv
+sudo lvextend -L +5G /dev/devops-vg/tws-lv
 
 sudo resize2fs /dev/devops-vg/tws-lv
 
