@@ -76,9 +76,9 @@ sudo pvdisplay
 - **pvs** – Verifies all Physical Volumes.
 - **pvdisplay** – Shows detailed PV information.
 
-### 📷 Screenshot
+### 📷 Output
 
-> *(Add Screenshot Here)*
+![notes](Images/Create-Physical-Volumes.png) 
 
 ---
 
@@ -104,9 +104,9 @@ sudo vgdisplay
 - **vgs** – Lists available Volume Groups.
 - **vgdisplay** – Shows detailed VG information.
 
-### 📷 Screenshot
+### 📷  Output
 
-> *(Add Screenshot Here)*
+![notes](Images/Create-Volume-Group.png) 
 
 ---
 
@@ -138,9 +138,9 @@ sudo lvcreate -l 100%FREE -n tws-lv devops-vg
 - **lvs** – Lists all Logical Volumes.
 - **lvdisplay** – Displays detailed Logical Volume information.
 
-### 📷 Screenshot
+### 📷 OutPut
 
-> *(Add Screenshot Here)*
+![notes](Images/Create-Logical-Volume.png) 
 
 ---
 
@@ -169,38 +169,16 @@ df -h
 - **mount** – Mounts the Logical Volume.
 - **df -h** – Verifies the mounted filesystem.
 
-### 📷 Screenshot
+### 📷 Output
 
-> *(Add Screenshot Here)*
+![notes](Images/Format-and-Mount-the-Logical-Volume.png) 
 
----
-
-# Task 7 - Verify Data Persistence
-
-## 🎯 Objective
-
-Confirm that data remains after unmounting and remounting.
-
-### Commands
-
-```bash
-sudo umount /mnt/tws-vg-mount
-
-sudo mount /dev/devops-vg/tws-lv /mnt/tws-vg-mount
-```
-
-### Command Explanation
-
-- **umount** – Safely unmounts the filesystem.
-- **mount** – Mounts it again.
-
-### 📷 Screenshot
-
-> *(Add Screenshot Here)*
 
 ---
 
-# Task 8 - Extend the Logical Volume
+
+
+# Task 7 - Extend the Logical Volume
 
 ## 🎯 Objective
 
@@ -222,13 +200,14 @@ df -h
 - **resize2fs** – Expands the ext4 filesystem.
 - **df -h** – Verifies the new size.
 
-### 📷 Screenshot
+### 📷 Output
 
-> *(Add Screenshot Here)*
+![notes](Images/Extend-the-Logical-Volume.png) 
+
 
 ---
 
-# Task 9 - Mount a Disk Without LVM
+# Task 8 - Mount a Disk Without LVM
 
 ## 🎯 Objective
 
@@ -250,9 +229,10 @@ sudo mount /dev/nvme3n1 /mnt/tws-disk-mount
 - **mkdir** – Creates a mount point.
 - **mount** – Mounts the disk directly.
 
-### 📷 Screenshot
+### 📷 Output
 
-> *(Add Screenshot Here)*
+![notes](Images/Mount-a-Disk-Without-LVM.png) 
+
 
 ---
 
