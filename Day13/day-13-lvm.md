@@ -139,7 +139,7 @@ sudo lvcreate -l 100%FREE -n tws-lv devops-vg
 - **lvdisplay** – Displays detailed Logical Volume information.
 
 ### 📷 OutPut
-
+ 
 ![notes](Images/Create-Logical-Volume.png) 
 
 ---
