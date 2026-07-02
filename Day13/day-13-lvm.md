@@ -18,7 +18,7 @@ vgs
 lvs
 ```
 
-### Command Explanation
+### What Each Command Does
 
 - **lsblk** – Lists all block devices and partitions.
 - **df -h** – Displays mounted filesystems and available disk space.
@@ -44,7 +44,7 @@ Verify that the newly attached storage devices are visible to Linux.
 lsblk
 ```
 
-### Command Explanation
+### What Each Command Does
 
 - **lsblk** – Displays newly attached disks such as `/dev/nvme1n1`, `/dev/nvme2n1`, etc.
 
@@ -70,7 +70,7 @@ sudo pvs
 sudo pvdisplay
 ```
 
-### Command Explanation
+### What Each Command Does
 
 - **pvcreate** – Converts disks into Physical Volumes.
 - **pvs** – Verifies all Physical Volumes.
@@ -98,7 +98,7 @@ sudo vgs
 sudo vgdisplay
 ```
 
-### Command Explanation
+### What Each Command Does
 
 - **vgcreate** – Creates a Volume Group.
 - **vgs** – Lists available Volume Groups.
@@ -132,7 +132,7 @@ sudo lvdisplay
 sudo lvcreate -l 100%FREE -n tws-lv devops-vg
 ```
 
-### Command Explanation
+### What Each Command Does
 
 - **lvcreate** – Creates a Logical Volume.
 - **lvs** – Lists all Logical Volumes.
@@ -162,7 +162,7 @@ sudo mount /dev/devops-vg/tws-lv /mnt/tws-vg-mount
 df -h
 ```
 
-### Command Explanation
+### What Each Command Does
 
 - **mkfs.ext4** – Creates an ext4 filesystem.
 - **mkdir** – Creates the mount point.
@@ -194,7 +194,7 @@ sudo resize2fs /dev/devops-vg/tws-lv
 df -h
 ```
 
-### Command Explanation
+### What Each Command Does
 
 - **lvextend** – Extends the Logical Volume.
 - **resize2fs** – Expands the ext4 filesystem.
@@ -223,7 +223,7 @@ sudo mkdir -p /mnt/tws-disk-mount
 sudo mount /dev/nvme3n1 /mnt/tws-disk-mount
 ```
 
-### Command Explanation
+### What Each Command Does
 
 - **mkfs.ext4** – Formats the disk.
 - **mkdir** – Creates a mount point.
