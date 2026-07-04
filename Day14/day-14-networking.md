@@ -106,7 +106,7 @@ Checks whether another host is reachable over the network.
 
 Successfully sent 4 packets with 0% packet loss.
 
-### Screenshot
+### Output
 
 > 📷 ![curl](Images/Reachability-Test.png)
 
@@ -136,7 +136,7 @@ Shows every router (hop) between your machine and the destination.
 - Time taken
 - Any timeout (* * *)
 
-### Screenshot
+### Output
 
 > 📷 ![curl](Images/Trace-Network-Path.png)
 
@@ -167,7 +167,7 @@ Lists all TCP and UDP ports currently listening on the system.
 - Service Name
 - Process ID
 
-### Screenshot
+### Output
 
 > 📷 ![curl](Images/Check-Listening-Ports.png)
 
@@ -197,7 +197,7 @@ Resolves a domain name into an IP address.
 - DNS Server
 - Query Time
 
-### Screenshot
+### Output
 
 > 📷 ![curl](Images/DNS-Lookup.png)
 
@@ -251,7 +251,7 @@ Displays active network connections.
 - ESTABLISHED
 - TIME_WAIT
 
-### Screenshot
+### Output
 
 > 📷 ![curl](Images/Active-Connections.png)
 
@@ -298,7 +298,7 @@ curl -I http://localhost:80
 
 Verifies whether the selected service is reachable.
 
-### Screenshot
+### Output
 
 > 📷 ![curl](Images/Port-Probe.png)
 
