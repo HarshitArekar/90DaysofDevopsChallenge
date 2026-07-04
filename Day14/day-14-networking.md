@@ -1,154 +1,427 @@
-# Networking Fundamentals & Hands-on Checks
+# Day 14 - Networking Fundamentals & Hands-on
 
-## OSI and TCP/IP Model
 
-### OSI Model -
+Today's I Learn the basics of Linux networking and practice essential troubleshooting commands used by DevOps Engineers to verify connectivity, DNS resolution, ports, and web services.
 
-The OSI model is a 7-layer framework used to understand how network communication works.
 
-- **L7 Application** – User-facing network services.
-- **L6 Presentation** – Data format and encryption.
-- **L5 Session** – Connection management.
-- **L4 Transport** – TCP/UDP communication.
-- **L3 Network** – IP addressing and routing.
-- **L2 Data Link** – Device-to-device communication.
-- **L1 Physical** – Cables, signals, and hardware.
+# Task 1: Understand Networking Basics
 
-### TCP/IP Model -
+## OSI Model (7 Layers)
 
-TCP/IP is a 4-layer networking model used for communication across the internet.
+| Layer | Name | Purpose |
+|--------|------|---------|
+| Layer 7 | Application | HTTP, HTTPS, DNS, FTP |
+| Layer 6 | Presentation | Data Encryption & Compression |
+| Layer 5 | Session | Manages Communication Sessions |
+| Layer 4 | Transport | TCP / UDP |
+| Layer 3 | Network | IP Addressing & Routing |
+| Layer 2 | Data Link | MAC Address |
+| Layer 1 | Physical | Cables, Switches, Signals |
 
-- **Application Layer** – User-facing network services.
-- **Transport Layer** – TCP/UDP communication.
-- **Internet Layer** – IP addressing and routing.
-- **Network Access Layer** – Physical network connectivity.
 
-### Protocol Placement -
+## TCP/IP Model
 
-- **Application Layer** – HTTP, HTTPS, DNS, DHCP, SSH
-- **Transport Layer** – TCP, UDP
-- **Internet Layer** – IP, ICMP, ARP
-- **Network Access Layer** – Ethernet, Wi-Fi
+| Layer | Protocol Examples |
+|--------|-------------------|
+| Application | HTTP, HTTPS, DNS, SSH |
+| Transport | TCP, UDP |
+| Internet | IP, ICMP |
+| Network Access | Ethernet, Wi-Fi |
+
+
+## Protocol Location
+
+| Protocol | Layer |
+|----------|-------|
+| HTTP/HTTPS | Application |
+| DNS | Application |
+| TCP/UDP | Transport |
+| IP | Internet |
+| Ethernet | Network Access |
+
+---
 
 ## Real Example
 
-```bash
-curl -L google.com
+```
+curl https://google.com
 ```
 
-This command fetches the webpage content.
-
-→ HTTP (Application) over TCP (Transport) over IP (Internet)
-
-![curl](images/01-curl-l.png)
-
----
-
-# Hands-on Checklist
-
-- **Identity:** `hostname -I`
-
-**Observation:** Successfully identified the EC2 instance's private IP address: **172.31.43.96**
-
-![hostname](images/02-hostname.png)
+Application Layer (HTTP)
+⬇
+Transport Layer (TCP)
+⬇
+Internet Layer (IP)
+⬇
+Network Access Layer (Ethernet/Wi-Fi)
 
 ---
 
-- **Reachability:** `ping <target>`
+# Task 2: Identity Check
 
-**Observation:** Successfully verified connectivity to Google. All packets were received with **0% packet loss** and an average latency of **9.056 ms**.
+## Command Used
 
-![ping](images/03-ping.png)
+```bash
+hostname -I
+```
 
----
+### Alternative
 
-- **Path:** `traceroute <target>`
+```bash
+ip addr show
+```
 
-**Observation:** Traffic reached Google successfully through multiple hops with low latency.
+## Purpose
 
-![traceroute](images/04-traceroute.png)
+Displays the IP address assigned to your Linux machine.
 
----
+## Why We Use It
 
-- **Ports:** `ss -tulnp`
+Before troubleshooting any network issue, you should know your server's IP address.
 
-**Observation:** Active listening ports and services were displayed. SSH is listening on **port 22**.
+### Screenshot
 
-![ports](images/05-ss-tulnp.png)
-
----
-
-- **Name resolution:** `dig <domain>` or `nslookup <domain>`
-
-**Observation:** Domain resolved successfully to **142.251.210.110**.
-
-![dig](images/06-dig.png)
+> 📷 Paste output here
 
 ---
 
-- **HTTP check:** `curl -I <http/https-url>`
+# Task 3: Reachability Test
 
-**Observation:** Received **HTTP/1.1 301 Moved Permanently**. The request was redirected to **www.google.com**.
+## Command Used
 
-![curl-i](images/07-curl-i.png)
+```bash
+ping -c 4 google.com
+```
+
+## Purpose
+
+Checks whether another host is reachable over the network.
+
+## What to Observe
+
+- Packet Loss
+- Latency (ms)
+- Number of packets sent and received
+
+## Example Observation
+
+Successfully sent 4 packets with 0% packet loss.
+
+### Screenshot
+
+> 📷 Paste output here
 
 ---
 
-- **Connections snapshot:** `ss -an | head`
+# Task 4: Trace Network Path
 
-**Observation:** Active socket and connection information displayed successfully.
+## Command Used
 
-![ss-an](images/08-ss-an.png)
+```bash
+traceroute google.com
+```
+
+### Alternative
+
+```bash
+tracepath google.com
+```
+
+## Purpose
+
+Shows every router (hop) between your machine and the destination.
+
+## What to Observe
+
+- Total hops
+- Time taken
+- Any timeout (* * *)
+
+### Screenshot
+
+> 📷 Paste output here
 
 ---
 
-# Mini Task: Port Probe & Interpret
+# Task 5: Check Listening Ports
 
-- SSH service on port 22
+## Command Used
 
-### Observation:
+```bash
+ss -tulpn
+```
 
-SSH daemon (**sshd**) is listening on port **22**.
+### Alternative
 
-![ssh-port](images/09-ssh-tulnp.png)
+```bash
+netstat -tulpn
+```
+
+## Purpose
+
+Lists all TCP and UDP ports currently listening on the system.
+
+## What to Observe
+
+- Port Number
+- Protocol
+- Service Name
+- Process ID
+
+### Screenshot
+
+> 📷 Paste output here
 
 ---
 
-- Connection succeeded
+# Task 6: DNS Lookup
 
-![nc](images/10-nc-zvlocalhost.png)
+## Command Used
+
+```bash
+dig google.com
+```
+
+### Alternative
+
+```bash
+nslookup google.com
+```
+
+## Purpose
+
+Resolves a domain name into an IP address.
+
+## What to Observe
+
+- IP Address
+- DNS Server
+- Query Time
+
+### Screenshot
+
+> 📷 Paste output here
+
+---
+
+# Task 7: HTTP Header Check
+
+## Command Used
+
+```bash
+curl -I https://google.com
+```
+
+## Purpose
+
+Checks whether a web server is responding and returns only HTTP headers.
+
+## Common Status Codes
+
+| Code | Meaning |
+|------|----------|
+| 200 | OK |
+| 301 | Redirect |
+| 403 | Forbidden |
+| 404 | Not Found |
+| 500 | Internal Server Error |
+
+### Screenshot
+
+> 📷 Paste output here
+
+---
+
+# Task 8: Active Connections
+
+## Command Used
+
+```bash
+netstat -an | head
+```
+
+## Purpose
+
+Displays active network connections.
+
+## Observe
+
+- LISTEN
+- ESTABLISHED
+- TIME_WAIT
+
+### Screenshot
+
+> 📷 Paste output here
+
+---
+
+# Task 9: Port Probe
+
+## Step 1
+
+Find a listening port.
+
+```bash
+ss -tulpn
+```
+
+Example
+
+```
+22 SSH
+80 Nginx
+```
+
+---
+
+## Step 2
+
+Test the port.
+
+SSH
+
+```bash
+nc -zv localhost 22
+```
+
+OR
+
+Nginx
+
+```bash
+curl -I http://localhost:80
+```
+
+## Purpose
+
+Verifies whether the selected service is reachable.
+
+### Screenshot
+
+> 📷 Paste output here
+
+---
+
+## Step 3
+
+Observation
+
+Example
+
+```
+Port 22 is reachable.
+SSH service is running successfully.
+```
 
 If not reachable:
 
-- Check service status - `systemctl status ssh`
-- Check logs - `journalctl -u ssh`
-- Check firewall - `sudo ufw status`
+Next checks
+
+```bash
+sudo systemctl status ssh
+```
+
+```bash
+sudo ufw status
+```
+
+```bash
+ss -tulpn
+```
 
 ---
 
 # Reflection
 
-- Ping command gives the fastest indication of network connectivity issues.
-  -> `ping`
+## 1. Which command gives the fastest signal when something is broken?
 
-- DNS resolution confirms whether a domain name is correctly mapped to an IP address.
-  -> `dig`, `nslookup`
+Answer
 
-- Traceroute helps identify the network path and potential delays between source and destination.
-  -> `traceroute`
+```
+ping
+```
 
-- HTTP checks verify web server availability and response status codes.
-  -> `curl -I <url>`
+Reason
 
-- Port checks confirm whether a service is listening and reachable.
-  -> `ss -tulnp`, `nc -zv`
+It quickly checks whether the destination is reachable.
 
-- Follow up checks in real incident :
+---
 
-  ○ Check firewall (`sudo ufw status`)
-  
-  ○ Service health check (`systemctl status <service>`)
-  
-  ○ Review service logs (`journalctl -u <service>`)
-  
-  ○ Connectivity test (`ping`, `traceroute`, `nc`)
+## 2. If DNS fails, which layer would you inspect?
+
+- Application Layer
+- Transport Layer (UDP Port 53)
+- Internet Layer
+
+---
+
+## 3. If HTTP 500 appears?
+
+It means the server is reachable, but the application has encountered an internal error.
+
+Commands to investigate
+
+```bash
+sudo systemctl status nginx
+```
+
+```bash
+journalctl -u nginx
+```
+
+```bash
+tail -f /var/log/nginx/error.log
+```
+
+---
+
+## 4. Two Follow-up Checks
+
+Check service status
+
+```bash
+systemctl status nginx
+```
+
+Check system logs
+
+```bash
+journalctl -xe
+```
+
+---
+
+# Commands Used
+
+| Command | Purpose |
+|----------|---------|
+| hostname -I | Show system IP address |
+| ip addr show | Display network interfaces |
+| ping -c 4 google.com | Test network connectivity |
+| traceroute google.com | Trace packet path |
+| tracepath google.com | Alternative to traceroute |
+| ss -tulpn | Show listening ports |
+| netstat -tulpn | Alternative for listening ports |
+| dig google.com | DNS lookup |
+| nslookup google.com | Alternative DNS lookup |
+| curl -I https://google.com | Check HTTP response |
+| netstat -an \| head | Show active connections |
+| nc -zv localhost 22 | Test local port connectivity |
+| systemctl status nginx | Check service status |
+| journalctl -u nginx | View service logs |
+| tail -f /var/log/nginx/error.log | Monitor error logs |
+
+---
+
+# What I Learned
+
+- Understood the OSI and TCP/IP networking models.
+- Learned how to identify a system's IP address.
+- Verified network connectivity using ping.
+- Traced the network path with traceroute.
+- Examined listening ports and active services.
+- Performed DNS lookups using dig and nslookup.
+- Checked HTTP responses with curl.
+- Tested local ports using nc.
+- Practiced basic network troubleshooting techniques used by DevOps Engineers.
