@@ -79,10 +79,9 @@ Displays the IP address assigned to your Linux machine.
 
 Before troubleshooting any network issue, you should know your server's IP address.
 
-### Screenshot
+### Output
 
-> 📷 Paste output here
-
+> 📷 ![curl](Images/hostname-I.png)
 ---
 
 # Task 3: Reachability Test
@@ -109,7 +108,7 @@ Successfully sent 4 packets with 0% packet loss.
 
 ### Screenshot
 
-> 📷 Paste output here
+> 📷 ![curl](Images/Reachability-Test.png)
 
 ---
 
@@ -139,7 +138,7 @@ Shows every router (hop) between your machine and the destination.
 
 ### Screenshot
 
-> 📷 Paste output here
+> 📷 ![curl](Images/Trace-Network-Path.png)
 
 ---
 
@@ -170,7 +169,7 @@ Lists all TCP and UDP ports currently listening on the system.
 
 ### Screenshot
 
-> 📷 Paste output here
+> 📷 ![curl](Images/Check-Listening-Ports.png)
 
 ---
 
@@ -200,7 +199,8 @@ Resolves a domain name into an IP address.
 
 ### Screenshot
 
-> 📷 Paste output here
+> 📷 ![curl](Images/DNS-Lookup.png)
+
 
 ---
 
@@ -228,7 +228,8 @@ Checks whether a web server is responding and returns only HTTP headers.
 
 ### Screenshot
 
-> 📷 Paste output here
+> 📷 ![curl](Images/HTTP-Header-Check.png)
+
 
 ---
 
@@ -252,7 +253,7 @@ Displays active network connections.
 
 ### Screenshot
 
-> 📷 Paste output here
+> 📷 ![curl](Images/Active-Connections.png)
 
 ---
 
@@ -282,7 +283,7 @@ Test the port.
 SSH
 
 ```bash
-nc -zv localhost 22
+sudo ss -tulnp | grep :22
 ```
 
 OR
@@ -299,36 +300,9 @@ Verifies whether the selected service is reachable.
 
 ### Screenshot
 
-> 📷 Paste output here
+> 📷 ![curl](Images/Port-Probe.png)
 
----
 
-## Step 3
-
-Observation
-
-Example
-
-```
-Port 22 is reachable.
-SSH service is running successfully.
-```
-
-If not reachable:
-
-Next checks
-
-```bash
-sudo systemctl status ssh
-```
-
-```bash
-sudo ufw status
-```
-
-```bash
-ss -tulpn
-```
 
 ---
 
