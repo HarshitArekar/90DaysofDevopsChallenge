@@ -92,19 +92,6 @@ Example:
 ip addr show
 ```
 
-**Sample Output**
-
-```text
-inet 172.31.41.95/20
-inet 127.0.0.1/8
-```
-
-**Observation**
-
-- `172.31.41.95` → Private IP
-- `127.0.0.1` → Loopback
-- `172.31.47.255` → Broadcast
-
 **Purpose**
 
 Display network interfaces and IP addresses.
@@ -113,9 +100,15 @@ Display network interfaces and IP addresses.
 
 Used to verify network configuration and troubleshoot connectivity.
 
-**Screenshot**
+**Output**
 
-> Add Screenshot Here
+![curl](Images/ip-addr-show.png)
+
+**Observation**
+
+- `172.31.41.95` → Private IP
+- `127.0.0.1` → Loopback
+- `172.31.47.255` → Broadcast
 
 ---
 
@@ -161,17 +154,6 @@ Used to verify network configuration and troubleshoot connectivity.
 sudo ss -tulpn | grep 22
 ```
 
-**Output**
-
-```text
-tcp LISTEN 0 4096 0.0.0.0:22
-tcp LISTEN 0 4096 [::]:22
-```
-
-**Observation**
-
-- SSH is listening on IPv4 and IPv6.
-- Port 22 is open.
 
 **Purpose**
 
@@ -180,6 +162,16 @@ Verify the SSH service is listening.
 **Why We Use It**
 
 Ensures remote SSH connections are available.
+
+**Output**
+
+![curl](Images/Check-SSH-Listening-Port.png)
+
+**Observation**
+
+- SSH is listening on IPv4 and IPv6.
+- Port 22 is open.
+
 
 ---
 
@@ -191,12 +183,6 @@ Ensures remote SSH connections are available.
 nc -zv localhost 22
 ```
 
-**Output**
-
-```text
-Connection to localhost (127.0.0.1) 22 port [tcp/ssh] succeeded!
-```
-
 **Purpose**
 
 Test whether port 22 is reachable.
@@ -204,6 +190,13 @@ Test whether port 22 is reachable.
 **Why We Use It**
 
 Quickly verify network connectivity to SSH.
+
+**Output**
+
+![curl](Images/Test-SSH-Port.png)
+
+
+
 
 ---
 
