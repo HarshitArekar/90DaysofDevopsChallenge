@@ -8,7 +8,7 @@ Today's I Learn the networking fundamentals every DevOps Engineer should underst
 
 ## Task 1: DNS – How Names Become IPs
 
-### 1. What happens when you type `facebook.com` in a browser?
+### 1. What happens when you type `facebook.com` in a browser? 
 
 **Answer**
 
