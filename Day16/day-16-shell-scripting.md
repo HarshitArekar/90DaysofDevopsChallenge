@@ -36,7 +36,7 @@
 - Double quotes `" "` allow variable expansion.
 - Single quotes `' '` treat the content as literal text.
 
-[Here is the script variables.sh](scripts/variables.sh)
+[Here is the script variables.sh](scripts/variable.sh)
 
 ![variables](images/02-variable.png)
 
@@ -61,7 +61,7 @@
    - Takes a number using `read`
    - Prints whether it is positive, negative, or zero
 
-[Here is the script check_number.sh](scripts/check_number.sh)
+[Here is the script check_number.sh](scripts/Conditional.sh)
 
 ![check-number](images/04-check-number.png)
 
@@ -70,7 +70,7 @@
    - Checks if the file exists using `-f`
    - Prints appropriate message
 
-[Here is the script file_check.sh](scripts/file_check.sh)
+[Here is the script file_check.sh](scripts/Conditional_file.sh)
 
 ![file-check](images/05-file-check.png)
 
