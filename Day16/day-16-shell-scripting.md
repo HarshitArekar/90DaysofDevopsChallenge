@@ -20,7 +20,7 @@
 
 [Here is the script hello.sh](scripts/hello.sh)
 
-![hello](images/01-hello.png)chmod u=rwx,g=rwx
+![hello](Images/hello.png)
 
 ---
 
@@ -38,7 +38,7 @@
 
 [Here is the script variables.sh](scripts/variable.sh)
 
-![variables](images/02-variable.png)
+![variables](Images/variable.png)
 
 ---
 
