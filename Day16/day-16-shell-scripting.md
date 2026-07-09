@@ -98,7 +98,7 @@ Create `server_check.sh` that:
 
 [Here is the script server_check.sh](scripts/server_check.sh)
 
-![server-check](Images/service-check.png)
+![server-check](Images/service_check.png)
 
 ---
 
