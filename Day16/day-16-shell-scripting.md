@@ -58,11 +58,11 @@ Today'S I Learn the fundamentals of Bash Shell Scripting by creating simple scri
 1. Create `greet.sh` that:
    - Asks the user for their name using `read`
    - Asks for their favourite tool
-   - Prints: `Hello <name>, your favourite tool is <tool>`
+   - Prints: `Hello <name>, your favourite tool is <tool>` 
 
 [Here is the script greet.sh](scripts/greet.sh)
 
-![greet](images/03-greet.png)
+![greet](Images/greet.png)
 
 ---
 
