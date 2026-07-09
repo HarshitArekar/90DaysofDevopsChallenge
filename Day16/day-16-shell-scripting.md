@@ -72,7 +72,7 @@
 
 [Here is the script file_check.sh](scripts/Conditional_file.sh)
 
-![file-check](Images/conditional.png)
+![file-check](Images/conditional_file.png)
 
 ---
 
@@ -87,7 +87,7 @@ Create `server_check.sh` that:
 
 [Here is the script server_check.sh](scripts/server_check.sh)
 
-![server-check](images/06-service-check.png)
+![server-check](Images/service-check.png)
 
 ---
 
