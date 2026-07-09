@@ -63,7 +63,7 @@
 
 [Here is the script check_number.sh](scripts/Conditional.sh)
 
-![check-number](images/04-check-number.png)
+![check-number](Images/conditional.png)
 
 2. Create `file_check.sh` that:
    - Asks for a filename
@@ -72,7 +72,7 @@
 
 [Here is the script file_check.sh](scripts/Conditional_file.sh)
 
-![file-check](images/05-file-check.png)
+![file-check](Images/conditional.png)
 
 ---
 
