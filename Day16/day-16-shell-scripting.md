@@ -1,5 +1,16 @@
 # Shell Scripting Basics
 
+
+## Tasks
+Today'S I Learn the fundamentals of Bash Shell Scripting by creating simple scripts using:
+
+- Shebang (`#!/bin/bash`)
+- `echo`
+- Variables
+- `read`
+- `if-else` conditions
+
+
 ## Task 1: First Script
 
 1. Create a file `hello.sh`
