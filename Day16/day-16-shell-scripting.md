@@ -72,7 +72,7 @@ Today'S I Learn the fundamentals of Bash Shell Scripting by creating simple scri
    - Takes a number using `read`
    - Prints whether it is positive, negative, or zero
 
-[Here is the script check_number.sh](scripts/Conditional.sh)
+[Here is the script conditional.sh](scripts/Conditional.sh)
 
 ![check-number](Images/conditional.png)
 
@@ -81,7 +81,7 @@ Today'S I Learn the fundamentals of Bash Shell Scripting by creating simple scri
    - Checks if the file exists using `-f`
    - Prints appropriate message
 
-[Here is the script file_check.sh](scripts/Conditional_file.sh)
+[Here is the script conditional_file.sh](scripts/Conditional_file.sh)
 
 ![file-check](Images/conditional_file.png)
 
