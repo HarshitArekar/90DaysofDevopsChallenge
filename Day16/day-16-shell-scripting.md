@@ -20,7 +20,7 @@
 
 [Here is the script hello.sh](scripts/hello.sh)
 
-![hello](images/01-hello.png)
+![hello](images/01-hello.png)chmod u=rwx,g=rwx
 
 ---
 
