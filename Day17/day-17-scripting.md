@@ -76,12 +76,12 @@ Today I practiced writing more practical Bash scripts by using loops, passing co
 - Show the total number of arguments.
 - Print every argument passed to the script.
 
-### Example
-```
-Script Name : ./args_demo.sh
-Total Arguments : 3
-Arguments : Linux DevOps AWS
-```
+[Here is the script args_demo.sh](scripts/args_demo.sh)
+
+### Output
+
+![args_demo](images/args-demo.png)
+
 
 ---
 
