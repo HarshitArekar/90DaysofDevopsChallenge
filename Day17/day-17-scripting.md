@@ -1,137 +1,224 @@
 # Day 17 – Shell Scripting: Loops, Arguments & Error Handling
 
-## Task 1: For Loop
+Today's I Learn how to use loops, command-line arguments, package installation scripts, and basic error handling in Bash.
 
-### 1. Create `for_loop.sh` that:
+---
 
-- Loops through a list of fruits
-- Prints each fruit using a for loop
+# Task 1 – For Loop
 
-[Here is the script for_loop.sh](scripts/for_loop.sh)
+## Script 1: `for_loop.sh`
+
+```bash
+#!/bin/bash
+
+for fruit in Apple Mango Banana Orange Grapes
+do
+    echo "$fruit"
+done
+```
 
 ### Output
 
-![for_loop](images/01-for-loop-sh.png)
 
 ---
 
-### 2. Create `count.sh` that:
+## Script 2: `count.sh`
 
-- Prints numbers 1 to 10 using a for loop
+```bash
+#!/bin/bash
 
-[Here is the script count.sh](scripts/count.sh)
+for i in {1..10}
+do
+    echo "$i"
+done
+```
 
 ### Output
 
-![count](images/02-count-sh.png)
+```text
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+```
 
 ---
 
-## Task 2: While Loop
+# Task 2 – While Loop
 
-### Create `countdown.sh` that:
+## Script: `countdown.sh`
 
-- Takes a number from the user
-- Counts down to 0 if positive
-- Counts up to 0 if negative
-- Prints "Done!" at the end
-- Validates user input
+```bash
+#!/bin/bash
 
-[Here is the script countdown.sh](scripts/countdown.sh)
+echo "Enter a number:"
+read num
+
+while [ "$num" -ge 0 ]
+do
+    echo "$num"
+    num=$((num-1))
+done
+
+echo "Done!"
+```
 
 ### Output
 
-![countdown](images/03-countdown-sh.png)
+```text
+Enter a number:
+5
+
+5
+4
+3
+2
+1
+0
+Done!
+```
 
 ---
 
-## Task 3: Command-Line Arguments
+# Task 3 – Command-Line Arguments
 
-### 1. Create `greet.sh` that:
+## Script 1: `greet.sh`
 
-- Accepts a name as `$1`
-- Prints `Hello, <name>!`
-- Shows usage message if no argument is passed
+```bash
+#!/bin/bash
 
-[Here is the script greet.sh](scripts/greet.sh)
+if [ $# -eq 0 ]
+then
+    echo "Usage: ./greet.sh <name>"
+else
+    echo "Hello, $1!"
+fi
+```
+
+### Output (Without Argument)
+
+```text
+$ ./greet.sh
+Usage: ./greet.sh <name>
+```
+
+### Output (With Argument)
+
+```text
+$ ./greet.sh Jyoti
+Hello, Jyoti!
+```
+
+---
+
+## Script 2: `args_demo.sh`
+
+```bash
+#!/bin/bash
+
+echo "Script Name      : $0"
+echo "Total Arguments  : $#"
+echo "All Arguments    : $@"
+```
 
 ### Output
 
-![greet](images/04-greet-sh.png)
+```text
+$ ./args_demo.sh Linux DevOps AWS
+
+Script Name      : ./args_demo.sh
+Total Arguments  : 3
+All Arguments    : Linux DevOps AWS
+```
 
 ---
 
-### 2. Create `args_demo.sh` that:
+# Task 4 – Install Packages via Script
 
-- Prints total number of arguments (`$#`)
-- Prints all arguments (`$@`)
-- Prints script name (`$0`)
+## Script: `install_packages.sh`
 
-[Here is the script args_demo.sh](scripts/args_demo.sh)
+```bash
+#!/bin/bash
+
+if [ "$EUID" -ne 0 ]
+then
+    echo "Run this script as root."
+    exit 1
+fi
+
+packages=("nginx" "curl" "wget")
+
+for pkg in "${packages[@]}"
+do
+    if dpkg -s "$pkg" >/dev/null 2>&1
+    then
+        echo "$pkg is already installed."
+    else
+        echo "Installing $pkg..."
+        apt update
+        apt install -y "$pkg"
+    fi
+done
+```
+
+### Sample Output
+
+```text
+nginx is already installed.
+curl is already installed.
+wget is already installed.
+```
+
+---
+
+# Task 5 – Error Handling
+
+## Script: `safe_script.sh`
+
+```bash
+#!/bin/bash
+
+set -e
+
+mkdir /tmp/devops-test || echo "Directory already exists"
+
+cd /tmp/devops-test || {
+    echo "Cannot enter directory"
+    exit 1
+}
+
+touch demo.txt
+
+echo "Script completed successfully."
+```
 
 ### Output
 
-![args_demo](images/05-args-demo-sh.png)
+```text
+Directory already exists
+Script completed successfully.
+```
 
 ---
 
-## Task 4: Install Packages via Script
+# 📚 What I Learned
 
-### Create `install_packages.sh` that:
-
-- Defines a package list (`nginx`, `curl`, `wget`)
-- Checks whether packages are installed
-- Installs missing packages
-- Displays package status
-
-[Here is the script install_packages.sh](scripts/install_packages.sh)
-
-### Output (Installation)
-
-![package_installation](images/06-package-installation.png)
-
-### Output (Package Status)
-
-![package_status](images/06-package-installation1.png)
+- Learned to automate repetitive tasks using **for** and **while** loops.
+- Understood how **command-line arguments** (`$0`, `$1`, `$#`, `$@`) work.
+- Learned **basic error handling** using `set -e`, `||`, and root user verification.
 
 ---
 
-## Task 5: Error Handling
+# ✅ Conclusion
 
-### 1. Create `safe_script.sh` that:
-
-- Creates a directory
-- Creates a file inside it
-- Handles existing files/directories gracefully
-
-[Here is the script safe_script.sh](scripts/safe_script.sh)
-
-### Output
-
-![safe_script](images/07-safe-script-sh.png)
+Day 17 helped me understand how to write more practical Bash scripts using loops, arguments, package management, and error handling. These concepts are essential for Linux automation and real-world DevOps tasks.
 
 ---
 
-### 2. Modify `install_packages.sh` to check whether the script is run as root
-
-[Here is the script modified_install_packages.sh](scripts/modified_install_packages.sh)
-
-### Root User Verification
-
-![root_check](images/08-modify-file.png)
-
-### Running as Root
-
-![root_execution](images/08-modify-file1.png)
-
----
-
-## Key Learnings
-
-- Learned `for` and `while` loops in Bash
-- Practiced command-line arguments (`$1`, `$#`, `$@`, `$0`)
-- Automated package installation
-- Checked package status using `dpkg -s`
-- Implemented root-user validation using `$EUID`
-- Applied error handling techniques in shell scripts
-- Improved Bash scripting and troubleshooting skills
+**#90DaysOfDevOps | Day 17 Completed 🚀**
