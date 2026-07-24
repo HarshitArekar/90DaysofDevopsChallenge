@@ -95,12 +95,12 @@ Today I practiced writing more practical Bash scripts by using loops, passing co
 - Display the installation status.
 - Ensure the script runs only with root privileges.
 
-### Expected Output
-```
-nginx : Installed
-curl : Installed
-wget : Installed
-```
+
+[Here is the script install_packages.sh](scripts/install_packages.sh)
+
+### Output (Installation)
+
+![package_installation](images/package-installation.png)
 
 ---
 
