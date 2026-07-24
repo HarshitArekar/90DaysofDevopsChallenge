@@ -109,17 +109,17 @@ Today I practiced writing more practical Bash scripts by using loops, passing co
 ### Script: `safe_script.sh`
 
 **Purpose**
-- Create a working directory.
+- Copy a simple file.
 - Move into the directory.
-- Create a sample file.
-- Stop execution if a critical error occurs.
 
-### Example Output
-```
-Directory created successfully.
-demo.txt created.
-Script completed successfully.
-```
+[Here is the script safe_script.sh](scripts/safe_script.sh)
+
+### Output
+
+![safe_script](images/07-safe-script-sh.png)
+
+
+
 
 ---
 
