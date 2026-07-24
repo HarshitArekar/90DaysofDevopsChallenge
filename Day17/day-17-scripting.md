@@ -45,16 +45,12 @@ Today I practiced writing more practical Bash scripts by using loops, passing co
 
 [Here is the script countdown.sh](scripts/countdown.sh)
 
+
 ### Output
 
-![countdown](I#!/bin/bash
+![countdown](Images/countdown.png)
 
-if cp file1.txt /backup/
-then
-    echo "Backup Successful"
-else
-    echo "Backup Failed"
-fimages/countdown.png)
+---
 
 
 ---
