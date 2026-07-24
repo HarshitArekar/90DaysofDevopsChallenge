@@ -1,41 +1,32 @@
-# Day 17 – Shell Scripting: Loops, Arguments & Error Handling
+# Day 17 - Bash Scripting: Loops, Arguments & Error Handling
 
-Today's I Learn how to use loops, command-line arguments, package installation scripts, and basic error handling in Bash.
-
----
-
-# Task 1 – For Loop
-
-## Script 1: `for_loop.sh`
-
-```bash
-#!/bin/bash
-
-for fruit in Apple Mango Banana Orange Grapes
-do
-    echo "$fruit"
-done
-```
-
-### Output
-
+Today I practiced writing more practical Bash scripts by using loops, passing command-line arguments, checking package status, and handling script errors. These concepts are commonly used in Linux administration and DevOps automation.
 
 ---
 
-## Script 2: `count.sh`
+# Task 1: Working with For Loop
 
-```bash
-#!/bin/bash
+### Script: `for_loop.sh`
 
-for i in {1..10}
-do
-    echo "$i"
-done
-```
+**Purpose**
+- Store a list of fruits.
+- Display each fruit one by one using a `for` loop.
+
+[Here is the script for_loop.sh](scripts/for_loop.sh)
 
 ### Output
 
-```text
+![for_loop](images/for_loop.png)
+
+---
+
+### Script: `count.sh`
+
+**Purpose**
+- Print numbers from 1 to 10 using a `for` loop.
+
+### Result
+```
 1
 2
 3
@@ -50,30 +41,18 @@ done
 
 ---
 
-# Task 2 – While Loop
+# Task 2: Using While Loop
 
-## Script: `countdown.sh`
+### Script: `countdown.sh`
 
-```bash
-#!/bin/bash
+**Purpose**
+- Read a number from the user.
+- Continue decreasing the value until it reaches zero.
+- Display a completion message.
 
-echo "Enter a number:"
-read num
-
-while [ "$num" -ge 0 ]
-do
-    echo "$num"
-    num=$((num-1))
-done
-
-echo "Done!"
+### Sample Output
 ```
-
-### Output
-
-```text
-Enter a number:
-5
+Enter a number: 5
 
 5
 4
@@ -81,144 +60,96 @@ Enter a number:
 2
 1
 0
+
 Done!
 ```
 
 ---
 
-# Task 3 – Command-Line Arguments
+# Task 3: Command-Line Arguments
 
-## Script 1: `greet.sh`
+### Script: `greet.sh`
 
-```bash
-#!/bin/bash
+**Purpose**
+- Receive a username as input.
+- Display a greeting message.
+- Show a usage message if no argument is supplied.
 
-if [ $# -eq 0 ]
-then
-    echo "Usage: ./greet.sh <name>"
-else
-    echo "Hello, $1!"
-fi
+### Example
 ```
-
-### Output (Without Argument)
-
-```text
-$ ./greet.sh
-Usage: ./greet.sh <name>
-```
-
-### Output (With Argument)
-
-```text
 $ ./greet.sh Jyoti
+
 Hello, Jyoti!
 ```
 
 ---
 
-## Script 2: `args_demo.sh`
+### Script: `args_demo.sh`
 
-```bash
-#!/bin/bash
+**Purpose**
+- Display the script filename.
+- Show the total number of arguments.
+- Print every argument passed to the script.
 
-echo "Script Name      : $0"
-echo "Total Arguments  : $#"
-echo "All Arguments    : $@"
+### Example
 ```
-
-### Output
-
-```text
-$ ./args_demo.sh Linux DevOps AWS
-
-Script Name      : ./args_demo.sh
-Total Arguments  : 3
-All Arguments    : Linux DevOps AWS
+Script Name : ./args_demo.sh
+Total Arguments : 3
+Arguments : Linux DevOps AWS
 ```
 
 ---
 
-# Task 4 – Install Packages via Script
+# Task 4: Package Installation Script
 
-## Script: `install_packages.sh`
+### Script: `install_packages.sh`
 
-```bash
-#!/bin/bash
+**Purpose**
+- Verify whether `nginx`, `curl`, and `wget` are installed.
+- Install only the missing packages.
+- Display the installation status.
+- Ensure the script runs only with root privileges.
 
-if [ "$EUID" -ne 0 ]
-then
-    echo "Run this script as root."
-    exit 1
-fi
-
-packages=("nginx" "curl" "wget")
-
-for pkg in "${packages[@]}"
-do
-    if dpkg -s "$pkg" >/dev/null 2>&1
-    then
-        echo "$pkg is already installed."
-    else
-        echo "Installing $pkg..."
-        apt update
-        apt install -y "$pkg"
-    fi
-done
+### Expected Output
 ```
-
-### Sample Output
-
-```text
-nginx is already installed.
-curl is already installed.
-wget is already installed.
+nginx : Installed
+curl : Installed
+wget : Installed
 ```
 
 ---
 
-# Task 5 – Error Handling
+# Task 5: Error Handling
 
-## Script: `safe_script.sh`
+### Script: `safe_script.sh`
 
-```bash
-#!/bin/bash
+**Purpose**
+- Create a working directory.
+- Move into the directory.
+- Create a sample file.
+- Stop execution if a critical error occurs.
 
-set -e
-
-mkdir /tmp/devops-test || echo "Directory already exists"
-
-cd /tmp/devops-test || {
-    echo "Cannot enter directory"
-    exit 1
-}
-
-touch demo.txt
-
-echo "Script completed successfully."
+### Example Output
 ```
-
-### Output
-
-```text
-Directory already exists
+Directory created successfully.
+demo.txt created.
 Script completed successfully.
 ```
 
 ---
 
-# 📚 What I Learned
+# Key Takeaways
 
-- Learned to automate repetitive tasks using **for** and **while** loops.
-- Understood how **command-line arguments** (`$0`, `$1`, `$#`, `$@`) work.
-- Learned **basic error handling** using `set -e`, `||`, and root user verification.
-
----
-
-# ✅ Conclusion
-
-Day 17 helped me understand how to write more practical Bash scripts using loops, arguments, package management, and error handling. These concepts are essential for Linux automation and real-world DevOps tasks.
+- Learned to automate repetitive tasks with **for** and **while** loops.
+- Understood how Bash arguments (`$0`, `$1`, `$#`, `$@`) work.
+- Practiced checking software installation status before installing packages.
+- Used `set -e` and `||` for basic error handling.
+- Improved Bash scripting skills for DevOps automation.
 
 ---
 
-**#90DaysOfDevOps | Day 17 Completed 🚀**
+# Conclusion
+
+Day 17 strengthened my understanding of Bash scripting by combining loops, command-line arguments, package management, and error handling. These techniques help build reliable automation scripts for Linux and DevOps environments.
+
+**#90DaysOfDevOps 🚀**
