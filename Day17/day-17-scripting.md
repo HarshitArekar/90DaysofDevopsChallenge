@@ -29,7 +29,7 @@ Today I practiced writing more practical Bash scripts by using loops, passing co
 
 ### Output
 
-![count](Images/02-count.png)
+![count](Images/count.png)
 
 
 ---
@@ -123,7 +123,7 @@ fimages/countdown.png)
 
 ### Output
 
-![safe_script](Images/07-safe-script-sh.png)
+![safe_script](Images/safe-script-sh.png)
 
 
 
