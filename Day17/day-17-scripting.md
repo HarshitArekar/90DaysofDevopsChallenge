@@ -29,7 +29,7 @@ Today I practiced writing more practical Bash scripts by using loops, passing co
 
 ### Output
 
-![count](images/02-count.png)
+![count](Images/02-count.png)
 
 
 ---
@@ -47,7 +47,14 @@ Today I practiced writing more practical Bash scripts by using loops, passing co
 
 ### Output
 
-![countdown](images/countdown.png)
+![countdown](I#!/bin/bash
+
+if cp file1.txt /backup/
+then
+    echo "Backup Successful"
+else
+    echo "Backup Failed"
+fimages/countdown.png)
 
 
 ---
@@ -65,7 +72,7 @@ Today I practiced writing more practical Bash scripts by using loops, passing co
 
 ### Output
 
-![greet](images/greet_.png)
+![greet](Images/greet_.png)
 
 ---
 
@@ -80,7 +87,7 @@ Today I practiced writing more practical Bash scripts by using loops, passing co
 
 ### Output
 
-![args_demo](images/args-demo.png)
+![args_demo](Images/args-demo.png)
 
 
 ---
@@ -100,7 +107,7 @@ Today I practiced writing more practical Bash scripts by using loops, passing co
 
 ### Output (Installation)
 
-![package_installation](images/package-installation.png)
+![package_installation](Images/package-installation.png)
 
 ---
 
@@ -116,7 +123,7 @@ Today I practiced writing more practical Bash scripts by using loops, passing co
 
 ### Output
 
-![safe_script](images/07-safe-script-sh.png)
+![safe_script](Images/07-safe-script-sh.png)
 
 
 
