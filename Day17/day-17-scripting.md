@@ -16,7 +16,7 @@ Today I practiced writing more practical Bash scripts by using loops, passing co
 
 ### Output
 
-![for_loop](images/for_loop.png)
+![for_loop](Images/for_loop.png)
 
 ---
 
@@ -131,10 +131,3 @@ Script completed successfully.
 - Used `set -e` and `||` for basic error handling.
 - Improved Bash scripting skills for DevOps automation.
 
----
-
-# Conclusion
-
-Day 17 strengthened my understanding of Bash scripting by combining loops, command-line arguments, package management, and error handling. These techniques help build reliable automation scripts for Linux and DevOps environments.
-
-**#90DaysOfDevOps 🚀**
