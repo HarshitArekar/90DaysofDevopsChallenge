@@ -43,19 +43,12 @@ Today I practiced writing more practical Bash scripts by using loops, passing co
 - Continue decreasing the value until it reaches zero.
 - Display a completion message.
 
-### Sample Output
-```
-Enter a number: 5
+[Here is the script countdown.sh](scripts/countdown.sh)
 
-5
-4
-3
-2
-1
-0
+### Output
 
-Done!
-```
+![countdown](images/countdown.png)
+
 
 ---
 
