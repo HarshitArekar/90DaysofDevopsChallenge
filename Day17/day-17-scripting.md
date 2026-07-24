@@ -61,12 +61,11 @@ Today I practiced writing more practical Bash scripts by using loops, passing co
 - Display a greeting message.
 - Show a usage message if no argument is supplied.
 
-### Example
-```
-$ ./greet.sh Jyoti
+[Here is the script greet.sh](scripts/greet.sh)
 
-Hello, Jyoti!
-```
+### Output
+
+![greet](images/greet_.png)
 
 ---
 
