@@ -25,19 +25,12 @@ Today I practiced writing more practical Bash scripts by using loops, passing co
 **Purpose**
 - Print numbers from 1 to 10 using a `for` loop.
 
-### Result
-```
-1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-```
+[Here is the script count.sh](scripts/count.sh)
+
+### Output
+
+![count](images/02-count.png)
+
 
 ---
 
