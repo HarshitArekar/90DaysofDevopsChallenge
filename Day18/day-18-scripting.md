@@ -25,115 +25,19 @@ Today I learned how to write cleaner and reusable shell scripts using **function
 
 [Here is the script disk_check.sh](scripts/disk_check.sh)
 
-![disk_check.sh Output](Images/System Information.png)
+![disk_check.sh Output](Images/System_Information.png)
 
 ---
 
 # Task 3 – Strict Mode (`set -euo pipefail`)
 
-## File: `strict_demo.sh`
+- `set -e` → Exit immediately if a command fails.
+- `set -u` → Exit if an undefined variable is used.
+- `set -o pipefail` → Makes a pipeline fail if any command in the pipeline fails.
 
-```bash
-#!/bin/bash
+[Here is the script strict_demo.sh](scripts/strict_demo.sh)
 
-set -euo pipefail
-
-echo "Strict mode enabled"
-
-echo "$USERNAME"
-
-echo "This line will not execute"
-
-false
-
-echo "This line will also not execute"
-
-cat missing.txt | grep hello
-
-echo "End of script"
-```
-
-### Output
-
-```
-Strict mode enabled
-./strict_demo.sh: line 7: USERNAME: unbound variable
-```
-
-If the variable is fixed, then:
-
-```
-Strict mode enabled
-
-false
-Script exited because of set -e
-```
-
-If the `false` command is removed:
-
-```
-cat: missing.txt: No such file or directory
-Script exited because of pipefail
-```
-
----
-
-## What does each flag do?
-
-### `set -e`
-
-Stops the script immediately if any command returns a non-zero exit status.
-
-Example:
-
-```bash
-false
-echo "This will never execute"
-```
-
----
-
-### `set -u`
-
-Treats undefined variables as errors.
-
-Example:
-
-```bash
-echo "$MY_VAR"
-```
-
-Output:
-
-```
-MY_VAR: unbound variable
-```
-
----
-
-### `set -o pipefail`
-
-Normally only the last command in a pipeline determines success.
-
-With `pipefail`, the pipeline fails if **any command** inside it fails.
-
-Example:
-
-```bash
-cat missing.txt | grep hello
-```
-
-Without `pipefail`
-
-```
-Pipeline may appear successful.
-```
-
-With `pipefail`
-
-```
-Script exits because cat failed.
-```
+![strict_demo.sh Output](Images/set-euopipefail.png)
 
 ---
 
