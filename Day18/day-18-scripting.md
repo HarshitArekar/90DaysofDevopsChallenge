@@ -43,39 +43,13 @@ Today I learned how to write cleaner and reusable shell scripts using **function
 
 # Task 4 – Local Variables
 
-## File: `local_demo.sh`
-
-```bash
-#!/bin/bash
-
-demo_local() {
-    local message="I am local"
-    echo "Inside function: $message"
-}
-
-demo_global() {
-    message="I am global"
-}
-
-demo_local
-echo "Outside function: ${message:-Variable not found}"
-
-demo_global
-echo "Outside after global function: $message"
-```
-
-### Output
-
-```
-Inside function: I am local
-Outside function: Variable not found
-Outside after global function: I am global
-```
-
-### Explanation
-
 - `local` variables exist only inside the function.
-- Normal variables remain available after the function finishes.
+- Normal variables remain available after the function finishes
+
+[Here is the script local_demo.sh](scripts/local_demo.sh)
+
+![local_demo.sh Output](Images/Local_Variables.png)
+
 
 ---
 
