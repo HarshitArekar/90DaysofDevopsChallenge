@@ -19,46 +19,13 @@ Today I learned how to write cleaner and reusable shell scripts using **function
 
 # Task 2 – Functions with System Information
 
-## File: `disk_check.sh`
-
-```bash
-#!/bin/bash
-
-check_disk() {
-    echo "========== Disk Usage =========="
-    df -h /
-}
-
-check_memory() {
-    echo
-    echo "========== Memory Usage =========="
-    free -h
-}
-
-check_disk
-check_memory
-```
-
-### Sample Output
-
-```
-========== Disk Usage ==========
-
-Filesystem      Size  Used Avail Use% Mounted on
-/dev/xvda1       20G  8.2G   11G  43% /
-
-========== Memory Usage ==========
-
-               total        used        free
-Mem:           7.6Gi       2.3Gi       4.2Gi
-Swap:          2.0Gi         0B        2.0Gi
-```
-
-### Explanation
-
 - `check_disk()` displays root partition usage.
 - `check_memory()` displays RAM and swap usage.
 - Functions make scripts modular and reusable.
+
+[Here is the script disk_check.sh](scripts/disk_check.sh)
+
+![disk_check.sh Output](Images/System Information.png)
 
 ---
 
