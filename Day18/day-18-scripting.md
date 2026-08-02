@@ -1,6 +1,5 @@
 # Day 18 – Shell Scripting: Functions & Intermediate Concepts
 
-## 📌 Objective
 
 Today I learned how to write cleaner and reusable shell scripts using **functions**, **local variables**, and **strict mode (`set -euo pipefail`)**.
 
@@ -8,35 +7,13 @@ Today I learned how to write cleaner and reusable shell scripts using **function
 
 # Task 1 – Basic Functions
 
-## File: `functions.sh`
-
-```bash
-#!/bin/bash
-
-greet() {
-    echo "Hello, $1!"
-}
-
-add() {
-    echo "Sum = $(($1 + $2))"
-}
-
-greet "Shubham"
-add 10 20
-```
-
-### Output
-
-```
-Hello, Shubham!
-Sum = 30
-```
-
-### Explanation
-
 - `greet()` accepts one argument and prints a greeting.
 - `add()` accepts two numbers and prints their sum.
 - `$1` and `$2` represent the first and second arguments passed to the function.
+
+[Here is the script functions.sh](scripts/functions.sh)
+
+![functions.sh Output](Images/function.png)
 
 ---
 
