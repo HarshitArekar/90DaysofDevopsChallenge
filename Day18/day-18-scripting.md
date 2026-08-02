@@ -55,81 +55,25 @@ Today I learned how to write cleaner and reusable shell scripts using **function
 
 # Task 5 – System Information Reporter
 
-## File: `system_info.sh`
+Create `system_info.sh` that uses functions for everything:
 
-```bash
-#!/bin/bash
+1. A function to print hostname and OS information
 
-set -euo pipefail
+2. A function to print system uptime
 
-system_info() {
-    echo "========== System Information =========="
-    hostname
-    cat /etc/os-release | grep PRETTY_NAME
-}
+3. A function to print disk usage
 
-uptime_info() {
-    echo
-    echo "========== Uptime =========="
-    uptime
-}
+4. A function to print memory usage
 
-disk_usage() {
-    echo
-    echo "========== Top 5 Largest Directories =========="
-    du -sh /* 2>/dev/null | sort -hr | head -5
-}
+5. A function to print top CPU-consuming processes
 
-memory_usage() {
-    echo
-    echo "========== Memory Usage =========="
-    free -h
-}
+6. A main function that calls all the above functions
 
-cpu_usage() {
-    echo
-    echo "========== Top 5 CPU Processes =========="
-    ps -eo pid,comm,%cpu --sort=-%cpu | head -6
-}
+7. Use `set -euo pipefail` at the top
 
-main() {
-    system_info
-    uptime_info
-    disk_usage
-    memory_usage
-    cpu_usage
-}
+[Here is the script system_info.sh](scripts/system_info.sh)
 
-main
-```
-
-### Sample Output
-
-```
-========== System Information ==========
-ip-172-31-0-10
-Ubuntu 22.04 LTS
-
-========== Uptime ==========
-20:15 up 4 days, 3 users, load average: 0.10, 0.05, 0.03
-
-========== Top 5 Largest Directories ==========
-5.1G /var
-2.8G /usr
-1.3G /home
-...
-
-========== Memory Usage ==========
-total used free shared buff/cache available
-
-========== Top 5 CPU Processes ==========
-PID COMMAND %CPU
-1234 java 35.1
-789 python 21.3
-...
-```
-
----
+![system_info.sh Output](Images/system_info.png)
 
 # What I Learned
 
@@ -175,65 +119,6 @@ makes shell scripts much safer by:
 
 ---
 
-# Repository Structure
 
-```
-2026/
-└── day-18/
-    ├── functions.sh
-    ├── disk_check.sh
-    ├── strict_demo.sh
-    ├── local_demo.sh
-    ├── system_info.sh
-    └── day-18-scripting.md
-```
-
----
-
-# Git Commands
-
-```bash
-git add .
-
-git commit -m "Day 18: Shell Functions, Local Variables and Strict Mode"
-
-git push origin main
-```
-
----
-
-# Key Takeaways
-
-✅ Learned how to create reusable functions
-
-✅ Understood the importance of `local` variables
-
-✅ Learned why every production shell script should use:
-
-```bash
-set -euo pipefail
-```
-
-to make scripts reliable and easier to debug.
-
----
-
-# LinkedIn Post
-
-**Day 18 of #90DaysOfDevOps 🚀**
-
-Today I explored intermediate shell scripting concepts.
-
-✔️ Created reusable shell functions
-
-✔️ Learned function arguments and return behavior
-
-✔️ Used local variables to avoid variable leakage
-
-✔️ Understood why `set -euo pipefail` is considered best practice
-
-✔️ Built a modular System Information Reporter using functions
-
-Every day I'm improving my Linux automation skills and moving one step closer to becoming a DevOps Engineer.
 
 #90DaysOfDevOps #DevOpsKaJosh #TrainWithShubham #Linux #ShellScripting #DevOps #Automation
