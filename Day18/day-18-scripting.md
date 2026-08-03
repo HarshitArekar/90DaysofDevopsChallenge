@@ -4,7 +4,7 @@
 Today I learned how to write cleaner and reusable shell scripts using **functions**, **local variables**, and **strict mode (`set -euo pipefail`)**.
 
 ---
-
+ 
 # Task 1 – Basic Functions
 
 - `greet()` accepts one argument and prints a greeting.
