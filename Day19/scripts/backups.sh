@@ -1,73 +1,33 @@
-#!/bin/bash
+#/bin/bash
+<< usage
 
-set -eu
+./backups.sh < path to your source > < path to your folder >
 
-usage() {
-    echo "Usage : backup.sh source/path destination/path"
-    echo "Example : backup.sh /home/ubuntu/practice_sh /home/ubuntu/backup"
-    echo "Please provide source and destination"
-    exit 1
+usage
+
+display_usage () {
+
+        echo "./backups.sh < path to your source > < path to your folder >"
+
 }
 
-check_source() {
-    [ -d "$src" ] || {
-        echo "Source directory doesn't exist"
-        exit 1
-    }
-
-    [ -d "$dest" ] || {
-        echo "Destination directory doesn't exist"
-        exit 1
-    }
-}
-
-timestamp=$(date +%Y-%m-%d-%H-%M-%S)
-archive="backup-${timestamp}.tar.gz"
-
-backup() {
-
-    echo "======Taking BackUp======"
-
-    tar -czf "$dest/$archive" "$src" &>/dev/null
-
-    echo "Back Up Complete"
-    echo
-}
-
-print_file() {
-
-    echo "======Backup Taken======"
-
-    size=$(du -sh "$dest/$archive" | awk '{print $1}')
-
-    echo "Archive Name : $archive        Size : $size"
-    echo
-}
-
-delete_old_archives() {
-
-    archives=$(find "$dest" -name "*.tar.gz" -mtime +14)
-
-    if [ -n "$archives" ]; then
-
-        echo "======Removing archives older than 14 days======"
-
-        for file in $archives
-        do
-            rm "$file"
-            echo "Removed Archive : $file"
-        done
-    fi
-}
-
-if [ $# -lt 2 ]; then
-    usage
+if [[ $# -eq 0 ]];then 
+        display_usage
 fi
 
-src=$1
-dest=$2
+# CRATE Backups 
+source_dir=$1
+timestamp=$(date +"%Y-%m-%d_%H-%M-%S")
+backup_dir=$2
 
-check_source
-backup
-print_file
-delete_old_archives
+crate_backups () {
+
+        zip -r "${backup_dir}/backups_${timestamp}.zip" "${source_dir}" >/dev/null
+
+
+        if [[ $? -eq 0 ]] ; then
+                echo "backups genrated successfully for ${timestamp}"
+        fi
+}
+
+crate_backups
