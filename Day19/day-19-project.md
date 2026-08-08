@@ -29,7 +29,7 @@ Displays a success message after the backup is generated.
 
 [Here is the script log_rotate.sh](scripts/log_rotate.sh)
 
-![log-rotate](./Images/rotate.png) 
+![log-rotate](./Images/log_rotation.png) 
 
 ---
 
@@ -52,7 +52,7 @@ Deletes the older backups using rm -f.
 
 [Here is the script backup.sh](scripts/backups.sh)
 
-![backup](./Images/backup.png)
+![backup](./Images/backups.png)
 
 ---
 
