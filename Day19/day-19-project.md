@@ -1,15 +1,14 @@
 # Day 19 – Shell Scripting Project: Log Rotation, Backup & Crontab
 
-## Objective
 
-In this project, I applied Shell Scripting concepts from Days 16–18 to create real-world server maintenance automation.
+ Today's I applied Shell Scripting concepts from Days 16–18 to create real-world server maintenance automation.
 
 The project contains:
 
 * Log rotation script
 * Server backup script
 * Crontab scheduling
-* Combined maintenance script
+
 
 ---
 
@@ -23,35 +22,37 @@ The `log_rotate.sh` script performs log management.
 
 It:
 
-1. Takes a log directory as an argument.
-2. Compresses `.log` files older than 7 days using `gzip`.
-3. Deletes `.gz` files older than 30 days.
-4. Displays the number of compressed and deleted files.
-5. Exits if the log directory does not exist.
+Takes the source directory and backup directory as arguments.
+Generates a timestamp using date.
+Creates a compressed .zip backup using the zip -r command.
+Displays a success message after the backup is generated.
 
+[Here is the script log_rotate.sh](scripts/log_rotate.sh)
+
+![log-rotate](./Images/rotate.png) 
 
 ---
 
 # Task 2 – Server Backup Script
 
-## File: `backup.sh`
+## File: `backups.sh`
 
 ### Purpose
 
-The `backup.sh` script creates a compressed server backup.
+The `backups.sh` script creates a compressed server backup.
 
 It:
 
-1. Takes a source directory as an argument.
-2. Takes a backup destination as an argument.
-3. Creates a timestamped `.tar.gz` archive.
-4. Verifies that the archive was created successfully.
-5. Displays the archive name and size.
-6. Deletes backups older than 14 days.
-7. Exits if the source directory does not exist.
+Finds all existing backup ZIP files.
+Uses ls -t to arrange backups from newest to oldest.
+Keeps the latest 5 backups.
+Stores backups after the latest 5 in the backups_to_remove array.
+Deletes the older backups using rm -f.
 
 
+[Here is the script backup.sh](scripts/backups.sh)
 
+![backup](./Images/backup.png)
 
 ---
 
@@ -122,8 +123,8 @@ The reference asks for these three cron entries as part of Task 3.
 
 # What I Learned
 
-1. I learned how to create timestamped `.tar.gz` backups using Shell Scripting.
-2. I learned how to automate log rotation using `find`, `gzip`, and `rm`.
+1. I learned how to create timestamped backups using Shell Scripting.
+2. I learned how to automate log rotation.
 3. I learned how to use Crontab to schedule regular server maintenance tasks.
 
 ---
