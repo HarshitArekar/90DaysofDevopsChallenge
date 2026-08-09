@@ -6,7 +6,7 @@ Today's challenge is to analyze a log file using Bash scripting and generate a d
 The log analyzer performs the following tasks:
 
 1. Input and file validation
-2. Error count
+2. Error count 
 3. Critical event detection
 4. Top 5 error messages
 5. Summary report generation
