@@ -1,27 +1,15 @@
 # Day 20 – Bash Scripting Challenge: Log Analyzer and Report Generator
 
-## Introduction
 
-In Day 20, I worked on a Bash Scripting Challenge called **Log Analyzer and Report Generator**.
+Today's challenge is to analyze a log file using Bash scripting and generate a daily summary report.
 
-The main objective of this challenge was to analyze a system log file, identify errors and critical events, find the most common error messages, and generate a summary report.
-
-This task helped me understand how Bash scripting can be used to automate common system administration and DevOps tasks.
-
----
-
-## Challenge Overview
-
-The log analyzer performs the following major tasks:
+The log analyzer performs the following tasks:
 
 1. Input and file validation
-2. Error counting
+2. Error count
 3. Critical event detection
-4. Top 5 error message analysis
+4. Top 5 error messages
 5. Summary report generation
-
-An optional feature can also be added to archive the processed log file.
-
 ---
 
 ## Step 1: Input and Validation
