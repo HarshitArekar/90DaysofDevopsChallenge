@@ -36,7 +36,7 @@ The script should validate:
 
 [Here is the script input_valid.sh](scripts/input_valid.sh)
 
-![Input Validation](Images/01-input-validation.png)
+![Input Validation](Images/input&validtion.png)
 
 ---
 
@@ -51,28 +51,26 @@ The total number of matching lines should be displayed on the console.
 
 [Here is the script error_count.sh](scripts/error_count.sh)
 
-![Error Count](images/02-error-count-before.png)
-
-![Error Count Result](images/03-error-count-after.png)
+![Error Count Result](Images/error_count.png)
 
 ---
 
-## Step 3: Critical Events
+## Step 3: ERROR Events
 
 The third step is to search the log file for entries containing the keyword:
 
 ```text
-CRITICAL
+ERROR
 ```
 
 The output should include both:
 
 * The line number
-* The complete critical event
+* The complete ERROR event
 
-[Here is the script critical.sh](scripts/critical.sh)
+[Here is the script ERROR.sh](scripts/critical.sh)
 
-![Critical Events](images/04-critical-events.png)
+![ERROR Events](Images/ERROR_Events.png)
 
 ---
 
@@ -88,7 +86,7 @@ The results should be:
 
 [Here is the script top_error.sh](scripts/top_error.sh)
 
-![Top Error Messages](images/05-top-error-messages.png)
+![Top Error Messages](Images/top_5_error_messages.png)
 
 ---
 
@@ -111,9 +109,9 @@ The report should contain:
 
 [Here is the script log_analyzer_report.sh](scripts/log_analyzer_report.sh)
 
-![Report Content](images/06-report-content.png)
+![Report Content](Images/report_content.png)
 
-![Report Generation](images/07-report-generation.png)
+![Report Generation](Images/report_generation.png)
 
 
 
