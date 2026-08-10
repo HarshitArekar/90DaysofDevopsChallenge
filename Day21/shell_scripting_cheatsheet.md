@@ -197,7 +197,7 @@ Variables store data that can be reused throughout a script.
 
 ```bash
 NAME="Harshit"
-AGE=25
+AGE=20
 ```
 
 > No spaces around `=`.
@@ -228,7 +228,7 @@ echo "Hello $NAME"
 Output:
 
 ```text
-Hello Jaishree
+Hello Harshit
 ```
 
 ### Single Quotes
