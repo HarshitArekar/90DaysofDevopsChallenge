@@ -1,4 +1,4 @@
-# Shell Scripting Cheat Sheet
+# Day 21 – Shell Scripting Cheat Sheet
 
 Today's I  quick reference guide for Shell Scripting concepts, loops, functions, text processing tools, debugging techniques, and common DevOps scripting patterns.
 
