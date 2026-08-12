@@ -14,11 +14,6 @@ git --version
 
 **What it does:** Checks whether Git is installed and displays its version.
 
-### Example
-
-```text
-git version 2.43.0
-```
 
 ## 2. Configure Username
 
@@ -79,17 +74,6 @@ git init
 
 **What it does:** Converts the current folder into a Git repository.
 
-### Example
-
-```text
-Initialized empty Git repository
-```
-
-Git creates a hidden directory:
-
-```text
-.git/
-```
 
 ## 4. Check Repository Status
 
@@ -167,85 +151,7 @@ git config --list
 
 Displays Git configuration.
 
----
 
-## Basic Workflow
-
-### Initialize Repository
-
-```bash
-git init
-```
-
-Creates a new Git repository.
-
-### Check Status
-
-```bash
-git status
-```
-
-Shows the current repository state.
-
-### Stage a File
-
-```bash
-git add git-commands.md
-```
-
-Moves the file to the staging area.
-
-### Stage All Changes
-
-```bash
-git add .
-```
-
-Stages all changes in the current directory.
-
-### Commit Changes
-
-```bash
-git commit -m "Add Git commands reference"
-```
-
-Saves staged changes into the repository history.
-
----
-
-## Viewing Changes
-
-### View Unstaged Changes
-
-```bash
-git diff
-```
-
-Shows changes that have not been staged.
-
-### View Staged Changes
-
-```bash
-git diff --staged
-```
-
-Shows changes that are ready to be committed.
-
-### View Commit History
-
-```bash
-git log
-```
-
-Displays detailed commit history.
-
-### Compact History
-
-```bash
-git log --oneline
-```
-
-Displays commits in a short format.
 
 ---
 
@@ -372,144 +278,39 @@ git commit -m "update"
 
 # Task 6: Understand the Git Workflow
 
-## 1. Difference Between `git add` and `git commit`
+### 1. What is the difference between `git add` and `git commit`?
 
-### `git add`
+- `git add` keeps files in the staging area so they can be included in the next commit.
 
-```bash
-git add filename
-```
+- `git commit` saves staged changes into the repository history with a commit message.
 
-Moves changes from the **working directory** to the **staging area**.
+### 2. What does the staging area do? Why doesn't Git just commit directly?
 
-### `git commit`
+- The staging area stores files and changes that will be included in the next commit.
 
-```bash
-git commit -m "message"
-```
+- It helps review and organize changes before committing.
 
-Saves staged changes into the **repository history**.
+- It prevents accidental commits.
 
-Simple flow:
+### 3. What information does `git log` show you?
 
-```text
-Working Directory
-       |
-    git add
-       ↓
-Staging Area
-       |
-  git commit
-       ↓
-Repository
-```
+- `git log` shows commit history.
 
----
+- It displays commit ID, author, date and commit message.
 
-## 2. What Does the Staging Area Do?
+### 4. What is the `.git/` folder and what happens if you delete it?
 
-The staging area allows you to select and review the changes that will be included in the next commit.
+- `.git/` stores repository history, branches, tags and configuration files.
 
-It provides an extra step between modifying files and saving them permanently in Git history.
+- If deleted, Git tracking and commit history are lost.
 
-For example:
+### 5. What is the difference between a working directory, staging area, and repository?
 
-```text
-File A → Stage
-File B → Don't Stage
-File C → Stage
-```
+- **Working Directory** – Place where files are created and modified.
 
-Only the staged changes will be included in the next commit.
+- **Staging Area** – Area where changes are prepared before committing.
 
----
-
-## 3. What Information Does `git log` Show?
-
-```bash
-git log
-```
-
-Git log shows the project's commit history.
-
-It can display:
-
-* Commit ID
-* Author
-* Date
-* Commit message
-
-For a shorter view:
-
-```bash
-git log --oneline
-```
-
----
-
-## 4. What Is the `.git/` Folder?
-
-The `.git/` folder contains Git's internal repository information.
-
-It stores information related to:
-
-* Commits
-* Branches
-* References
-* Repository configuration
-* Git objects
-* HEAD
-
-If `.git/` is deleted, Git tracking and local commit history are lost.
-
----
-
-## 5. Working Directory vs Staging Area vs Repository
-
-### Working Directory
-
-The place where you create and modify project files.
-
-### Staging Area
-
-The area where you prepare changes before committing them.
-
-### Repository
-
-The area where Git stores commits and project history.
-
-### Complete Workflow
-
-```text
-┌──────────────────────┐
-│  Working Directory   │
-│ Create / Modify      │
-│ files                │
-└──────────┬───────────┘
-           │
-        git add
-           ↓
-┌──────────────────────┐
-│    Staging Area       │
-│ Changes prepared     │
-│ for next commit      │
-└──────────┬───────────┘
-           │
-       git commit
-           ↓
-┌──────────────────────┐
-│      Repository      │
-│ Commits & History    │
-└──────────────────────┘
-```
-
-## Day 22 Key Takeaway
-
-The main concept learned today is the **Git three-stage workflow**:
-
-```text
-Modify → Stage → Commit
-```
+- **Repository** – Stores commits, branches and complete project history.
 
 Important commands practiced:
 
