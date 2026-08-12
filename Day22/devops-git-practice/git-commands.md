@@ -1,4 +1,4 @@
-## Git Local Setup
+# Git Local Setup
 
 ### Check Git Version
 
