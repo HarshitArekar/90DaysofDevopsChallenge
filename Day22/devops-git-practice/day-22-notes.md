@@ -312,6 +312,8 @@ git commit -m "update"
 
 - **Repository** – Stores commits, branches and complete project history.
 
+ ---
+
 Important commands practiced:
 
 ```bash
