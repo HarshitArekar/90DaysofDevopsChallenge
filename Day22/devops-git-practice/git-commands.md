@@ -1,6 +1,3 @@
-
-# Day 22 – Git Commands Reference
-
 ## Git Local Setup
 
 ### Check Git Version
