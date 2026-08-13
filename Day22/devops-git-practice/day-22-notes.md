@@ -5,7 +5,7 @@ Today I started learning **Git**, a distributed version control system used to t
 ---
 
 # Task 1: Install and Configure Git
-
+ 
 ## 1. Check Git Version
 
 ```bash
