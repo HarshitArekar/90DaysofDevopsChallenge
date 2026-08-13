@@ -45,6 +45,7 @@ You can also check individually:
 git config user.name
 git config user.email
 ```
+![Git Configuration](../Images/Install_and_Configure_Git.png)
 
 ### Why configure username and email?
 
@@ -71,6 +72,8 @@ cd devops-git-practice
 ```bash
 git init
 ```
+![Git Repo(../Images/Create_Your_Git_Project.png)
+
 
 **What it does:** Converts the current folder into a Git repository.
 
@@ -206,6 +209,7 @@ Or use the compact format:
 ```bash
 git log --oneline
 ```
+![Git Log](../Images/Stage_and_Commit.png)
 
 ---
 
