@@ -98,6 +98,8 @@ Then:
 ls -la .git
 ```
 
+![Git Repo](../Images/Create_Your_Git_Project.png)
+
 The `.git/` directory stores important Git information such as repository history, branches, references, configuration, and Git objects.
 
 **Important:** Deleting `.git/` removes Git tracking and the local repository history, although the project files themselves remain.
