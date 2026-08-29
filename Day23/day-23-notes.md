@@ -24,4 +24,30 @@
   - Uncommitted changes may block switching.
 
 ---
+## Task 2: Branching Commands — Hands-On
 
+1. List all branches in your repo
+
+2. Create a new branch called `feature-1`
+
+3. Switch to `feature-1`
+
+4. Create a new branch and switch to it in a single command — call it `feature-2`
+
+5. Try using `git switch` to move between branches — how is it different from `git checkout`?
+
+6. Make a commit on `feature-1` that does not exist on `main`
+
+7. Switch back to `main` — verify that the commit from `feature-1` is not there
+
+8. Push your branches to GitHub
+
+9. Verify both branches are visible on GitHub
+
+![Git Branch](Images/git-branch.png)
+
+![Branches Created](Images/branches-created.png)
+
+![Git Log](Images/git-log.png)
+
+---
