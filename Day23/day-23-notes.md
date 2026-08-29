@@ -1,5 +1,9 @@
 # Day 23 – Git Branching & Working with GitHub
 
+Today I practiced Git branching commands using my devops-git-practice repository.
+
+---
+
 ## Task 1: Understanding Branches
 
 ### 1. What is a branch in Git?
