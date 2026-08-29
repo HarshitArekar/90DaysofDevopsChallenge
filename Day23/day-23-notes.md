@@ -55,3 +55,57 @@ Today I practiced Git branching commands using my devops-git-practice repository
 ![Git Log](Images/git-log.png)
 
 ---
+
+## Task 3: Push to GitHub
+
+1. Create a new repository on GitHub (do NOT initialize it with a README)
+
+2. Connect your local `devops-git-practice` repo to the GitHub remote
+
+3. Push your `main` branch to GitHub
+
+4. Push `feature-1` branch to GitHub
+
+5. Verify both branches are visible on GitHub
+
+6. Answer in your notes: What is the difference between `origin` and `upstream`?
+
+- `Origin` - Points to your remote repository.
+
+- `Upstream` - Points to the repository you forked from.
+
+  - If not forked then no need of upstream.
+
+![GitHub Branches](images/04-github-branch.png)
+
+![Git Push](images/05-git-push.png)
+
+---
+
+## Task 4: Pull from GitHub
+
+1. Make a change to a file directly on GitHub (use the GitHub editor)
+
+2. Pull that change to your local repo
+
+3. Answer in your notes: What is the difference between `git fetch` and `git pull`?
+
+- `fetch` - Only downloads changes from the remote. It does not merge them into your local branch.
+
+- `pull` - Downloads the changes and merges them into your local branch.
+
+---
+
+## Task 5: Clone vs Fork
+
+1. Clone any public repository from GitHub to your local machine
+
+2. Fork the same repository on GitHub, then clone your fork
+
+3. Answer in your notes:
+
+### What is the difference between clone and fork?
+
+- `Clone` - Clone means copying repository to your local computer. It is connected with remote.
+
+- `Fork` - Copying someone else's repository into your own GitHub account.
